@@ -77,3 +77,8 @@ vcpkg-manifest-install.log
 vcpkg-configuration.json
 
 #Miscellaneous
+
+
+# --- Override: include doc/doc_build ---
+!doc/doc_build/
+!doc/doc_build/**
