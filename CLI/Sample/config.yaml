@@ -1,0 +1,35 @@
+---
+apiVersion : "0.0.2"
+inputLocation: "\\Rotterdam\\"
+outputLocation: "\\Results\\"
+exportLocation: "\\Export\\"
+areaModel:
+  vertices: 
+   - "Area\\vertices_a.csv"
+   - "Area\\vertices_b.csv"
+  waypoints: "Area\\waypoints.csv"
+  links: "Area\\links.csv"
+  cells: "Area\\cells.csv"
+  objects: "Area\\objects.csv"
+  zones: "Area\\zones.csv"
+  weatherstations: "Area\\weatherstations.csv"
+  ertvs: "Area\\ertvs.csv"
+  windstrength: "Area\\windstrength.csv"
+  winddirection: "Area\\winddirection.csv"
+  current: "Area\\current.csv"
+  tide: "Area\\tide.csv"
+trafficModel:
+  shipCategories: "Traffic\\shipcategories.csv"
+  shipsOnLinks: "Traffic\\shiplinks.csv"
+  shipsOnCells: "Traffic\\shipcells.csv"
+interactionModel:
+  model: "sem"
+  shipLinkData: "ModelData\\shiplinkdata.csv"
+  shipCellData: "ModelData\\shipcelldata.csv"
+  causationFactors: "Causation\\causationfactors.csv"
+  pilotassistanceShip: "Measures\\pilotassistanceship.csv"
+  pilotassistanceZones: "Measures\\pilotassistancezones.csv"
+  measuresConfig: "\\Measures\\config.yaml"
+logger:
+  fileName: "samson.log"
+  logLevel: "verbose"

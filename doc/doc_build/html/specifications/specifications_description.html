@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Description &#8212; samson</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=ecb8216d"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'specifications/specifications_description';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://srcdoc.marin.nl/SAMSON/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'develop';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Components" href="specifications_components.html" />
+    <link rel="prev" title="Specifications" href="../specifications.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="develop" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="samson - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="samson - Home"/>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../references.html">
+    References
+  </a>
+</li>
+
+
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../tests.html">
+    Tests
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tests.html">
+    Tests
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifications_components.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifications_interfaces.html">External Interface Requirements</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../specifications.html" class="nav-link">Specifications</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Description</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="description">
+<span id="specification-description"></span><h1>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Under Development</p>
+</div>
+<section id="user-classes-and-characteristics">
+<h2>User Classes and Characteristics<a class="headerlink" href="#user-classes-and-characteristics" title="Link to this heading">#</a></h2>
+<section id="area">
+<h3>Area<a class="headerlink" href="#area" title="Link to this heading">#</a></h3>
+<p>The Area component serves as the geographical context within which ship movements, static objects, and weather phenomena are monitored
+and analyzed to predict collision frequencies.</p>
+<ul class="simple">
+<li><p>The World Geodetic System 1984 (WGS 84) for global positioning, ensuring accurate representation of locations shall be used.</p></li>
+<li><p>A raster grid system shall be implemented to divide the area into manageable sectors for detailed analysis:</p>
+<ul>
+<li><p>Start: is the latitude – longitude coordinate of the start point of the raster</p></li>
+<li><p>End: is the latitude – longitude coordinate of the endo point of the raster</p></li>
+<li><p>Origin: is indication of the direction of the raster. By default it starts from South-West.</p></li>
+<li><p>Grid Number in Latitude Direction (Y-axis): The total number of grid cells spanning the latitude of the area covered by the raster.</p></li>
+<li><p>Grid Number in Longitude Direction (X-axis): The total number of grid cells spanning the longitude of the area covered by the raster.</p></li>
+</ul>
+</li>
+<li><p>Each grid cell shall be defined using geographic coordinates (latitude and longitude) and have configurable dimensions by user.</p></li>
+</ul>
+</section>
+<section id="traffic-network">
+<h3>Traffic Network<a class="headerlink" href="#traffic-network" title="Link to this heading">#</a></h3>
+<p>A traffic network consists 3 types of items; waypoints, links and raster.</p>
+<p>A way point shall have following attributes:</p>
+<ul class="simple">
+<li><p>Latitude: Floating-point number representing the latitude of the waypoint.</p></li>
+<li><p>Longitude: Floating-point number representing the longitude of the waypoint.</p></li>
+<li><p>Identifier: Unique identifier (UID) for each waypoint.</p></li>
+<li><p>Name: Optional name or description for the waypoint.</p></li>
+</ul>
+<p>A way point shall provide an interface to modify its attribute, except its UID</p>
+<ul class="simple">
+<li><p>A link shall have following attributes:</p></li>
+<li><p>Start Waypoint ID: Unique identifier for the starting waypoint.</p></li>
+<li><p>End Waypoint ID: Unique identifier for the ending waypoint.</p></li>
+<li><p>Identifier: Unique identifier (UID) for each link (Start Waypoint ID + End Waypoint ID could be used
+so each direction of the link could have different UID).</p></li>
+<li><p>Type: Type of the link, indicating single direction or bidirectional</p></li>
+</ul>
+<p>A link shall provide an interface to modify its attributes.</p>
+<p>The raster shall have following attributes:</p>
+<ul class="simple">
+<li><p>Grid Size: Dimensions of each grid cell, typically in kilometers or nautical miles.</p></li>
+<li><p>Origin: Reference point (latitude and longitude) for the origin of the raster grid. The origin is the North-West point of the raster</p></li>
+</ul>
+<p>The raster shall provide an interface to modify its attributes.</p>
+<p>The raster shall provide an interface to return origin (north-west) point of queried grid by X and Y where X and Y are relative the most
+north-west grid of the raster.</p>
+<section id="static-objects">
+<h4>Static Objects<a class="headerlink" href="#static-objects" title="Link to this heading">#</a></h4>
+<p>An area may contain various static objects, including wind turbines, platforms, anchoring areas, grounding areas, and wind turbine
+farms, etc.</p>
+<p>All static objects shall have following attributes:</p>
+<ul class="simple">
+<li><p>Type: The specific type of the static object, which determines additional attributes and behaviors (e.g., platform, anchoring area, grounding area, wind turbine, wind turbine farm).</p></li>
+<li><p>Identifier: A unique identifier (UID) for each static object for reference and management.</p></li>
+<li><p>Name/Description: A name or description providing information about the static object.</p></li>
+<li><p>Location:</p>
+<ul>
+<li><p>For point-based objects: Defined by latitude and longitude coordinates.</p></li>
+<li><p>For area-based objects: Defined by a set of coordinates that form a polygon, defining the object’s boundaries.</p></li>
+</ul>
+</li>
+<li><p>Status: The current operational status of the object (active, under maintenance, deactivated, etc.).</p></li>
+<li><p>Area: The total area covered by the object, automatically calculated for polygon-based objects. For point-based objects, this can
+be represented by the area they effectively influence or occupy.</p></li>
+<li><p>Parent Identifier (for grouped objects): For static objects that are part of a larger grouping (e.g., turbines within a wind farm),
+this identifier links them to their parent object.</p></li>
+</ul>
+<p>Static objects shall be able to be grouped under a main static object, allowing complex structures such as wind turbine farms to be represented as a
+single entity with different individual components.</p>
+</section>
+</section>
+<section id="weather-stations">
+<h3>Weather Stations<a class="headerlink" href="#weather-stations" title="Link to this heading">#</a></h3>
+<p>TBD - an area contains the probability of an occurrences of a weather condition.</p>
+</section>
+<section id="traffic">
+<h3>Traffic<a class="headerlink" href="#traffic" title="Link to this heading">#</a></h3>
+<p>A Traffic Database shall consist of one or more traffic network, one or more area, and a unique identifier.</p>
+<p>TBD: indicate ship_links -&gt; this is traffic type route bounded traffic</p>
+<p>Traffic Database shall categorize ships (TBD: static objects) to different types of traffics; bounded and unbounded traffic.</p>
+<p>Each ship can be in one of the categories, either bounded traffic or unbounded traffic.</p>
+<section id="bounded-traffic">
+<h4>Bounded Traffic<a class="headerlink" href="#bounded-traffic" title="Link to this heading">#</a></h4>
+<p>Bounded traffic is the collection of ships (TBD: other objects) which are bounded to a traffic network link.</p>
+<p>Bounded traffic shall consist of ships thar are bounded to a traffic network link and those traffic network links themselves.</p>
+<p>Bounded object (ships {and TBD other objects}) shall have following attributes:</p>
+<ul class="simple">
+<li><p>Object UID: UID of the bounded object (ship, etc)</p></li>
+<li><p>Link UID: Traffic Network UID (TBD: this shall reflect the direction of the link)</p></li>
+<li><p>Lateral Distance: The distance of the bounded object from the reference point (TBD: center) measured lateral to the direction of the link.</p></li>
+<li><p>Tangent Distance: The distance of the bounded object from the reference point (TBD: center) measured perpendicular to the direction of
+the link (projected position on link).</p></li>
+</ul>
+</section>
+<section id="unbounded-traffic">
+<h4>Unbounded Traffic<a class="headerlink" href="#unbounded-traffic" title="Link to this heading">#</a></h4>
+<p>The unbounded traffic shall consist of ships which are not bounded to a traffic network link, and those ships are grouped in means of grid
+cells of the traffic network raster.</p>
+<p>An unbounded traffic object (ships {and TBD other objects}) shall have following attributes:</p>
+<ul class="simple">
+<li><p>Object UID: UID of the unbounded object (ship, etc.)</p></li>
+<li><p>Raster Grid Index: Relative grid index to the most north-west grid of the traffic network raster.</p></li>
+<li><p>X (latitude) index</p></li>
+<li><p>Y (longitude) index</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="operating-environment">
+<h2>Operating Environment<a class="headerlink" href="#operating-environment" title="Link to this heading">#</a></h2>
+<p>The software shall be compatible with MS Windows (versions: 10 and 11), Linux distributions (e.g., Ubuntu, CentOS, Fedora) and High-Performance
+Computing (HPC) systems.</p>
+</section>
+<section id="design-and-implementation-constraints">
+<h2>Design and Implementation Constraints<a class="headerlink" href="#design-and-implementation-constraints" title="Link to this heading">#</a></h2>
+<p><strong>Programming Language</strong>: Main programming language shall be C++20:</p>
+<ul class="simple">
+<li><p>C++20 increases the expressiveness and maintainability of code by introducing modern features such as concepts and coroutines.</p></li>
+<li><p>C++’s renowned performance capabilities have been further enhanced with C++20 optimizations.</p></li>
+<li><p>C++20, an ISO/IEC standard, ensures portability and compatibility across platforms and compilers.</p></li>
+<li><p>C++20 has a wide ecosystem of libraries and tools that support various development tasks and speed up project completion.</p></li>
+<li><p>Widespread industry adoption of C++20 and long-term support from vendors ensures alignment with best practices and future developments.</p></li>
+</ul>
+<p><strong>Build System</strong>: CMake shall be used as the build system:</p>
+<ul class="simple">
+<li><p>A build system that generates platform-specific build configurations, allowing developers to build projects across different operating
+systems and compilers.</p></li>
+<li><p>Modular design enables efficient management of large-scale projects with multiple components and dependencies.</p></li>
+<li><p>Integrates well with various external tools and libraries, simplifying the incorporation of third-party dependencies into the build process.</p></li>
+</ul>
+<p><strong>Deliverable</strong>: The main deliverable of the software shall be a dynamic library (.so on Unix-like systems, .dll on Windows) to allow more
+flexible updates and patching. The dynamic library(s), with any associated header files and documentation, shall be packaged and distributed
+in a manner that simplifies installation and usage for end-users.</p>
+</section>
+<section id="user-documentation">
+<h2>User Documentation<a class="headerlink" href="#user-documentation" title="Link to this heading">#</a></h2>
+<p>See <a class="reference internal" href="../user_guide.html#user-guide"><span class="std std-ref">User Guide</span></a> and <a class="reference internal" href="../tutorials.html#tutorials"><span class="std std-ref">Tutorials</span></a></p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-classes-and-characteristics">User Classes and Characteristics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area">Area</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traffic-network">Traffic Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#static-objects">Static Objects</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weather-stations">Weather Stations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traffic">Traffic</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-traffic">Bounded Traffic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#unbounded-traffic">Unbounded Traffic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operating-environment">Operating Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-and-implementation-constraints">Design and Implementation Constraints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-documentation">User Documentation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

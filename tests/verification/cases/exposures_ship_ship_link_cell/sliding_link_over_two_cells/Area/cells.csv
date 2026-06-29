@@ -1,0 +1,3 @@
+uid,num_vertex_uids,vertex_uids,...,grid_uid,description
+C0, 5, 2, 3, 4, 5, 2, G0, First_cell
+C1, 5, 3, 6, 7, 4, 3, G0, Second_cell

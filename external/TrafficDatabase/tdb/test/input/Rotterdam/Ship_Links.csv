@@ -1,0 +1,13 @@
+// Copyright (c) 2026, MARIN, Maritime Research Institute Netherlands.
+//
+// Licensed under the European Union Public Licence (EUPL), Version 1.2.
+// You may not use this work except in compliance with the Licence.
+// You may obtain a copy of the Licence at:
+//
+// https://eupl.eu/1.2/en/
+ship_uid,link_uid,count
+0_0,L001,100
+0_0,L002,100
+0_1,L001,50
+0_1,L002,200
+1_2,L003,50

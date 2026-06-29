@@ -1,0 +1,2 @@
+ship_type_uid, shipship_factor, drift_factor, ram_factor
+SCAT0, 1e-4, 1e-5, 1e-6

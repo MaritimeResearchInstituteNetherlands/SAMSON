@@ -1,0 +1,12 @@
+// Copyright (c) 2026, MARIN, Maritime Research Institute Netherlands.
+//
+// Licensed under the European Union Public Licence (EUPL), Version 1.2.
+// You may not use this work except in compliance with the Licence.
+// You may obtain a copy of the Licence at:
+//
+// https://eupl.eu/1.2/en/
+uid, numVertices, vertices, gridUID, description
+C0, 5, 0, 1, 4, 3, 0, G0, bottom left
+C1, 5, 1, 2, 5, 4, 1, G0, bottom right
+C2, 5, 3, 4, 7, 6, 3, G0, top left
+C3, 5, 4, 5, 8, 7, 4, G0, top right

@@ -1,0 +1,15 @@
+{
+  "dependencies": [
+    "fmt",
+    "gtest",
+    "boost-serialization",
+    "yaml-cpp",    
+    "shapelib"
+  ],
+  "overrides": [
+    { 
+        "name": "boost-serialization", 
+        "version": "1.83.0"
+    }
+  ]
+}

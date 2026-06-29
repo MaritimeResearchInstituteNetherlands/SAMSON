@@ -1,0 +1,1083 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Ship-Ship Exposures &#8212; samson</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=ecb8216d"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'theory/theory_exposure_shipship';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://srcdoc.marin.nl/SAMSON/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'develop';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ship-Object Exposures" href="theory_exposure_shipobject.html" />
+    <link rel="prev" title="Exposure Types" href="theory_exposure_types.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="develop" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="samson - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="samson - Home"/>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../references.html">
+    References
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../tests.html">
+    Tests
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tests.html">
+    Tests
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/qgis/tutorials_qgis.html">Set-up QGIS for SAMSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/qgis_anchor/tutorials_qgis_anchor.html">Anchor area geometry</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../theory.html">Theory</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="theory_conventions.html">Conventions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="theory_building_blocks.html">Building Blocks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory_area.html">Area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_ships.html">Ships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_traffic.html">Traffic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="theory_exposure_types.html">Exposure Types</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Ship-Ship Exposures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_exposure_shipobject.html">Ship-Object Exposures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="theory_causation_factors.html">Causation Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory_measures.html">Measures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tests.html">Tests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/exposures_ship_ship.html">Ship-Ship Exposures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/index.html">Link-Link</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/crossing_model/documentation.html">Crossing Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/crossing_model_multiple_links/documentation.html">Crossing Model with Multiple Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/head-on_model/documentation.html">Head-on Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/head-on_model_distribution/documentation.html">Head-on Model Distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/link_discretization_0/documentation.html">Discretization of Multiple Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/link_discretization_1/documentation.html">Discretization of a Single Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/overtaking_model/documentation.html">Overtaking Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/overtaking_model_distribution/documentation.html">Overtaking Model Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_cell/index.html">Cell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_cell/specified_heading/documentation.html">Specified Heading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_cell/uniform_heading/documentation.html">Uniform Heading Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/index.html">Link-Cell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/rotating_link_within_cell/documentation.html">Rotating Link in Cell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/sliding_distribution_link/documentation.html">Sliding Distribution of Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/sliding_link_over_two_cells/documentation.html">Sliding Link over Two Cells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/sliding_link_through_cell/documentation.html">Sliding Link through Cell</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/events_ship_ship.html">Ship-Ship Events</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/events_ship_ship/index.html">Causation Factors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/events_ship_ship/causation_factors/documentation.html">Striking and Struck Probability</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/collisions_ship_ship.html">Ship-Ship Collisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/exposures_ship_object.html">Ship-Object Exposures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/index.html">Link-Object</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/gradient_assessment/documentation.html">Drift and Ram Exposure Gradients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/large_object/documentation.html">Large Object Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/link_discretization/documentation.html">Link Discretization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/object_discretization/documentation.html">Ram Object Discretization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/object_elevation/documentation.html">Object Elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/ram_delta_y/documentation.html">Ram Verification for Gridlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/rotating_objects/documentation.html">Rotating Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/sliding_link/documentation.html">Sliding objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/sublink_test/documentation.html">Sublink test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/tidal_test/documentation.html">Tide Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/wind_vs_current/documentation.html">Wind versus Current</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_cell/index.html">Cell-Object</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_cell/direction_probabilities/documentation.html">Verifying ram and drift direction probabilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_cell/sliding_cell_through_object/documentation.html">Sliding Cell through Object</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/events_ship_object.html">Ship-Object Events</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/events_ship_object/index.html">Causation Factors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/events_ship_object/causation_factors/documentation.html">Drift and Ram Causation Factors</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/collisions_ship_object.html">Ship-Object Collisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/index.html">Measures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/drift_quantification/documentation.html">Drift Collision Quantification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/measure_anchor_function/documentation.html">Drift Anchor Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/measure_engine_repair_function/documentation.html">Drift Engine Repair Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/minimum_passing_distance/documentation.html">Minimum passing distance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_cheatsheet.html">Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../user_guide.html" class="nav-link">User Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../theory.html" class="nav-link">Theory</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="theory_exposure_types.html" class="nav-link">Exposure Types</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Ship-Ship Exposures</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="admonition warning" id="theory-shipship-exposure">
+<p class="admonition-title">Warning</p>
+<p>Under Development</p>
+</div>
+<section id="ship-ship-exposures">
+<h1>Ship-Ship Exposures<a class="headerlink" href="#ship-ship-exposures" title="Link to this heading">#</a></h1>
+<p>Traffic is described as a number of ship movements assigned to a link or a cell subdivided by ship type. The
+speed distribution depends on the ship type. This distribution can be replaced by a harmonic speed to simplify the computation.
+The harmonic speed is the correct mean value for a rate (<a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_mean">Wikipedia Harmonic Mean</a>).
+This results in the correct assumption for the presence of a ship on a link with length <span class="math notranslate nohighlight">\(L\)</span>. This is important for calculating
+the probability of an exposure between two ships.</p>
+<p>For ship-ship exposures we aim to design relevant situations, which are a proper indicator for an accident between two ships. The
+computation input is the statistics of the ship traffic. Only the number of ship movements on a link or raster cell for a large time
+span is applied. The traffic time history is only available in the initial data source (AIS data). We assume that the steel structures
+of two ships overlap for the exposure computation. The probability of this overlap is computated with three models (crossing, head-on and
+overtaking). A ship-ship exposure can be considered as a collision candidate. In reality, captains will take action to avoid a collision.
+They can change the speed and course of the ship. The probability of this not happening is called the causation factor. This causation
+factor links the counted statistical exposures and the true ship-ship accidents in an area over a time span.</p>
+<section id="nomenclature">
+<h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mu_i\)</span></p></td>
+<td><p>Mean value of ship <span class="math notranslate nohighlight">\(i\)</span> lateral distribution</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mu_j\)</span></p></td>
+<td><p>Mean value of ship <span class="math notranslate nohighlight">\(j\)</span> lateral distribution</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho_i\)</span></p></td>
+<td><p>Cell density of ship <span class="math notranslate nohighlight">\(i\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\rho_j\)</span></p></td>
+<td><p>Cell density of ship <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma_i\)</span></p></td>
+<td><p>Standard devation of ship <span class="math notranslate nohighlight">\(i\)</span> lateral distribution</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sigma_j\)</span></p></td>
+<td><p>Standard devation of ship <span class="math notranslate nohighlight">\(j\)</span> lateral distribution</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Delta\theta\)</span></p></td>
+<td><p>Exposure angle bin size</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta\)</span></p></td>
+<td><p>Exposure angle</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta_{ij}\)</span></p></td>
+<td><p>Exposure angle between ship <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta_{lim}\)</span></p></td>
+<td><p>Set threshold for the exposure angle</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(b_i\)</span></p></td>
+<td><p>Ship <span class="math notranslate nohighlight">\(i\)</span> width</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\overline{b}_{ij}\)</span></p></td>
+<td><p>Average width of ship <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(b_j\)</span></p></td>
+<td><p>Ship <span class="math notranslate nohighlight">\(j\)</span> width</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(l_i\)</span></p></td>
+<td><p>Ship <span class="math notranslate nohighlight">\(i\)</span> length</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(l_j\)</span></p></td>
+<td><p>Ship <span class="math notranslate nohighlight">\(j\)</span> length</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(u_i\)</span></p></td>
+<td><p>Harmonic speed of ship <span class="math notranslate nohighlight">\(i\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(u_j\)</span></p></td>
+<td><p>Harmonic speed of ship <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(u_{ij}\)</span></p></td>
+<td><p>Relative speed between ship <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\Delta}{y}_{k}\)</span></p></td>
+<td><p>Width of bin <span class="math notranslate nohighlight">\(k\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(A\)</span></p></td>
+<td><p>Cell area</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(A_k\)</span></p></td>
+<td><p>Area of bin <span class="math notranslate nohighlight">\(k\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(D_i\)</span></p></td>
+<td><p>Apparent exposure diameter of ship <span class="math notranslate nohighlight">\(i\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(D_j\)</span></p></td>
+<td><p>Apparent exposure diameter of ship <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(D_{ij}\)</span></p></td>
+<td><p>Apparent exposure diameter of ship <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(K\)</span></p></td>
+<td><p>Number of bins</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td><p>Link length</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(N_{cross}\)</span></p></td>
+<td><p>Number of crossing exposures per time unit</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(N_{e}\)</span></p></td>
+<td><p>Number of exposures per time unit</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(N_{head}\)</span></p></td>
+<td><p>Number of head-on exposures per time unit</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(N_{over}\)</span></p></td>
+<td><p>Number of overtaking exposures per time unit</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{\theta}\)</span></p></td>
+<td><p>The exposure angle probability</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(P_{ij}\)</span></p></td>
+<td><p>The probability that ship <span class="math notranslate nohighlight">\(i\)</span> overlaps ship <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(Q_{i}\)</span></p></td>
+<td><p>Number of passages per time unit for each ship type and size (<span class="math notranslate nohighlight">\(i\)</span> )</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_{j}\)</span></p></td>
+<td><p>Number of passages per time unit for each ship type and size (<span class="math notranslate nohighlight">\(j\)</span> )</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="exposure-models">
+<h2>Exposure models<a class="headerlink" href="#exposure-models" title="Link to this heading">#</a></h2>
+<p>In total three exposure models are available, denoted as:</p>
+<ul class="simple">
+<li><p>Crossing ships model</p></li>
+<li><p>Head-on ships model</p></li>
+<li><p>Overtaking ships model</p></li>
+</ul>
+<p>These model are discussed in the following sections and derived from the method proposed by Pedersen in <span id="id1">[<a class="reference internal" href="../references.html#id25" title="Preben Pedersen. Collision and grounding mechanics. The Danish Society of Naval Architects and Marine Engineers, pages 125-157, 01 1995.">Ped95</a>]</span>.</p>
+<section id="crossing-ships-model">
+<h3>Crossing ships model<a class="headerlink" href="#crossing-ships-model" title="Link to this heading">#</a></h3>
+<p>The relative velocity (<span class="math notranslate nohighlight">\(u_{ij}\)</span>) between ship <span class="math notranslate nohighlight">\(i\)</span> and ship <span class="math notranslate nohighlight">\(j\)</span> is computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-rel-vel-cross">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-rr-rel-vel-cross" title="Link to this equation">#</a></span>\[u_{ij}=\sqrt{u_{i}^2+u_{j}^2-2u_{i}u_{j}cos(\theta)}\]</div>
+<p>The number of exposures between two adjacent links per time unit are defined as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-num-cross">
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-rr-num-cross" title="Link to this equation">#</a></span>\[N_{cross}=\sum_{i=1}^{i=n}\sum_{j=1}^{j=n}\frac{D_{ij}}{sin(\theta)}\frac{Q_iQ_j}{u_iu_j}u_{ij}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(D_{ij}\)</span> is the apparent exposure diameter of the two crossing ships:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-dia-sum">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-rr-dia-sum" title="Link to this equation">#</a></span>\[D_{ij}=D_i+D_j\]</div>
+<p>The apparent exposure diameter of ship <span class="math notranslate nohighlight">\(i\)</span> is constructed with the contour of ship <span class="math notranslate nohighlight">\(j\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-dia-i">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-rr-dia-i" title="Link to this equation">#</a></span>\[D_{i}=\frac{l_{j}u_{i}sin(\theta)}{u_{ij}}+b_{j}\sqrt{(1-(sin(\theta)u_{i}/u_{ij})^2)}\]</div>
+<p>The apparent exposure diameter of ship <span class="math notranslate nohighlight">\(j\)</span> is constructed with the contour of ship <span class="math notranslate nohighlight">\(i\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-dia-j">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-rr-dia-j" title="Link to this equation">#</a></span>\[D_{j}=\frac{l_{i}u_{j}sin(\theta)}{u_{ij}}+b_{i}\sqrt{(1-(sin(\theta)u_{j}/u_{ij})^2)}\]</div>
+<p>The apparent exposure diameter is constructed with a rectangle. This rectangle is the envelope of a 2D ship contour and its side edges are
+parallel with the relative velocity vector. The value of the diameter depends on the ship size (<span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(l\)</span>) and the orientation
+of the relative velocity vector (see: <a class="reference internal" href="#fig-shipshipmodelcrossing"><span class="std std-numref">Fig. 20</span></a>).</p>
+<figure class="align-center" id="id8">
+<span id="fig-shipshipmodelcrossing"></span><img alt="ship_ship_model_crossing" src="../_images/ship_ship_model_crossing.svg" /><figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Crossing exposures</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The computed number of exposures per time unit (<span class="math notranslate nohighlight">\(N_{cross}\)</span>) are applicable for a pair of links. These exposures must be assigned to
+both ships with the ratios <span class="math notranslate nohighlight">\(D_{i}/D_{ij}\)</span> and <span class="math notranslate nohighlight">\(D_{j}/D_{ij}\)</span>, because ship <span class="math notranslate nohighlight">\(i\)</span> is exposed to ship <span class="math notranslate nohighlight">\(j\)</span> and vice versa. The
+ratio <span class="math notranslate nohighlight">\(D_{i}/D_{ij}\)</span> represents the fraction of exposures in which ship <span class="math notranslate nohighlight">\(i\)</span> is the striking vessel and <span class="math notranslate nohighlight">\(D_{j}/D_{ij}\)</span>
+corresponds with the fraction ship <span class="math notranslate nohighlight">\(j\)</span> is the striking vessel. For simplicity the fractions are listed in the table below.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id9">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Exposure fractions for striking and struck ships</span><a class="headerlink" href="#id9" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Ship <span class="math notranslate nohighlight">\(i\)</span></p></th>
+<th class="head"><p>Ship <span class="math notranslate nohighlight">\(j\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Striking</p></td>
+<td><p><span class="math notranslate nohighlight">\(D_i/D_{ij}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(D_j/D_{ij}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Struck</p></td>
+<td><p><span class="math notranslate nohighlight">\(D_j/D_{ij}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(D_i/D_{ij}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The setup in <a class="reference internal" href="#fig-shipshipmodelcrossing"><span class="std std-numref">Fig. 20</span></a> can be simplified as displayed in <a class="reference internal" href="#fig-shipshipmodelcrossingsimple"><span class="std std-numref">Fig. 21</span></a>. In the left figure
+the circular representations are replaced with line segments with a length <span class="math notranslate nohighlight">\(D_i\)</span> and <span class="math notranslate nohighlight">\(D_j\)</span>, each accompanied by their respective
+velocity vectors. This abstraction allows for further simplification, as illustrated in the right figure. Consequently, Monte Carlo simulations
+can be utilized to validate the analytical solution.</p>
+<figure class="align-center" id="id10">
+<span id="fig-shipshipmodelcrossingsimple"></span><img alt="ship_ship_model_crossing_simple" src="../_images/ship_ship_model_crossing_simple.svg" /><figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Crossing exposures simplified</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The lateral distribution of the traffic on a link has no impact on the exposure. It only impacts the location of the impact,
+which is not considered in the crossing model.</p>
+<p>Due to the <span class="math notranslate nohighlight">\(sin(\theta)\)</span> term in the denominator of Eq. <a class="reference internal" href="#equation-eq-rr-num-cross">(8)</a>, the exposure goes to <span class="math notranslate nohighlight">\(\infty\)</span> for <span class="math notranslate nohighlight">\(\theta \to 0\)</span>
+and <span class="math notranslate nohighlight">\(\theta \to \pi\)</span>. This phenomenon is mitigated by applying a transfer function to the computed exposures. The underlying concept is illustrated in
+<a class="reference internal" href="#fig-shipshiptransition"><span class="std std-numref">Fig. 22</span></a>.</p>
+<figure class="align-center" id="id11">
+<span id="fig-shipshiptransition"></span><img alt="ship_ship_transition" src="../_images/ship_ship_transition.svg" /><figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Transfer signal</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The equation of the transfer function:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-transfer">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-rr-transfer" title="Link to this equation">#</a></span>\[\begin{split}f(\theta) =
+\begin{cases}
+sin^2(\frac{\pi}{2} \cdot \frac{\theta}{\theta_{lim}}) &amp;  \theta &lt; \theta_{lim} \\
+1 &amp; \theta_{lim} \leq \theta \leq \pi - \theta_{lim}\\
+sin^2(\frac{\pi}{2} \cdot (1+\frac{\theta-\pi+\theta_{lim}}{\theta_{lim}})) &amp; \theta &gt; \pi-\theta_{lim}
+\end{cases}\end{split}\]</div>
+<p>The value of <span class="math notranslate nohighlight">\(\theta_{lim}\)</span> is set on <span class="math notranslate nohighlight">\(0.25\)</span> rad.</p>
+</section>
+<section id="head-on-ships-model">
+<h3>Head-on ships model<a class="headerlink" href="#head-on-ships-model" title="Link to this heading">#</a></h3>
+<p>The exposure angle for head-on exposures is equal to <span class="math notranslate nohighlight">\(\pi\)</span>. The relative velocity (<span class="math notranslate nohighlight">\(u_{ij}\)</span>) between ship <span class="math notranslate nohighlight">\(i\)</span> and ship
+<span class="math notranslate nohighlight">\(j\)</span> is computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-rel-vel-head">
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-rr-rel-vel-head" title="Link to this equation">#</a></span>\[u_{ij}=u_{i}+u_{j}\]</div>
+<p>The number of exposures between two adjacent links per time unit are defined as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-num-head">
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-rr-num-head" title="Link to this equation">#</a></span>\[N_{head}=L\sum_{i=1}^{i=n}\sum_{j=1}^{j=n}P_{ij}\frac{Q_iQ_j}{u_iu_j}u_{ij}\]</div>
+<p>The link length (<span class="math notranslate nohighlight">\(L\)</span>) and the lateral distributions of ship <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> are taken into account. The term <span class="math notranslate nohighlight">\(P_{ij}\)</span>
+represents the probability that ship <span class="math notranslate nohighlight">\(i\)</span> overlaps ship <span class="math notranslate nohighlight">\(j\)</span>. The ships width is used to compute this probability. The sum of two
+independent normally distributed random variables is normal, with its mean being the sum of the two means, and its variance being the sum of
+the two variances. This approach is explained on this <a class="reference external" href="https://en.wikipedia.org/wiki/Sum_of_normally_distributed_random_variables#:~:text=This%20means%20that%20the%20sum,squares%20of%20the%20standard%20deviations)">Wikipedia Sum Distribution</a> page.
+The <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> of the sum distribution are denoted as <span class="math notranslate nohighlight">\(\mu_{ij}\)</span> and <span class="math notranslate nohighlight">\(\sigma_{ij}\)</span> and computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-sum-mu">
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-rr-sum-mu" title="Link to this equation">#</a></span>\[\mu_{ij} = \mu_{i} + \mu_{j}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-rr-sum-sigma">
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-rr-sum-sigma" title="Link to this equation">#</a></span>\[\sigma_{ij}=\sqrt{(\sigma_{i}^2+\sigma_{j}^2)}\]</div>
+<p>The mean width of ship <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> is equal to:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-mean-width">
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq-rr-mean-width" title="Link to this equation">#</a></span>\[\overline{b}_{ij}=\frac{b_i+b_j}{2}\]</div>
+<p>Function <span class="math notranslate nohighlight">\(F\)</span> represents the cumulative probability function (CDF) of the sum distribution of ship <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>. The boundaries
+<span class="math notranslate nohighlight">\(-\overline{b}_{ij}\)</span> and <span class="math notranslate nohighlight">\(+\overline{b}_{ij}\)</span> represent the case that the rectangular shapes of the both ship overlap (=exposure).</p>
+<div class="math notranslate nohighlight" id="equation-eq-prop-head">
+<span class="eqno">(18)<a class="headerlink" href="#equation-eq-prop-head" title="Link to this equation">#</a></span>\[P_{ij}=P[-\overline{b}_{ij}&lt;Z&lt;+\overline{b}_{ij}]=F(+\overline{b}_{ij})-F(-\overline{b}_{ij})\]</div>
+<p>In case of a normal distribution the cumulative probability function is denoted as <span class="math notranslate nohighlight">\(\Theta\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-prop-head-theta">
+<span class="eqno">(19)<a class="headerlink" href="#equation-eq-rr-prop-head-theta" title="Link to this equation">#</a></span>\[P_{ij}=\Theta(+\overline{b}_{ij},\mu_{ij},\sigma_{ij})-\Theta(-\overline{b}_{ij},\mu_{ij},\sigma_{ij})\]</div>
+<figure class="align-center" id="id12">
+<span id="fig-shipshipmodelheadon"></span><img alt="ship_ship_model_head-on" src="../_images/ship_ship_model_head_on.svg" /><figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Head-on exposures</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="overtaking-ships-model">
+<h3>Overtaking ships model<a class="headerlink" href="#overtaking-ships-model" title="Link to this heading">#</a></h3>
+<p>The exposure angle for overtaking exposures is equal to zero. The relative velocity (<span class="math notranslate nohighlight">\(u_{ij}\)</span>) between ship <span class="math notranslate nohighlight">\(i\)</span> and ship
+<span class="math notranslate nohighlight">\(j\)</span> is computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rr-rel-vel-over">
+<span class="eqno">(20)<a class="headerlink" href="#equation-eq-rr-rel-vel-over" title="Link to this equation">#</a></span>\[u_{ij}=u_{j}-u_{i}\]</div>
+<p>The computation for overtaking is very simular to the head-on case. However the following aspects deviate:</p>
+<ol class="arabic simple">
+<li><p>Ship <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> sail on the same link and share therefore the same particulars for the lateral distributions and the
+number of passages per time unit.</p></li>
+<li><p>The relative speed can be negative. These cases are omitted.</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-rr-num-over">
+<span class="eqno">(21)<a class="headerlink" href="#equation-eq-rr-num-over" title="Link to this equation">#</a></span>\[N_{over}=L\sum_{i=1}^{i=n}\sum_{j=1}^{j=n}P_{ij}\frac{Q_iQ_j}{u_iu_j}u_{ij}\]</div>
+<p>The computation of <span class="math notranslate nohighlight">\(P_{ij}\)</span> is equal to the head-on case.</p>
+</section>
+</section>
+<section id="route-bound">
+<h2>Route-bound<a class="headerlink" href="#route-bound" title="Link to this heading">#</a></h2>
+<section id="crossing-ships">
+<h3>Crossing ships<a class="headerlink" href="#crossing-ships" title="Link to this heading">#</a></h3>
+<p>The crossing ships model is applied for the following conditions:</p>
+<ul class="simple">
+<li><p>For each waypoint in the area the unique pair of links that share the same waypoint with their endpoint (arrowhead) are listed.</p></li>
+<li><p>The exposure angle must fulfil the following condition for the listed paired links: <span class="math notranslate nohighlight">\({\theta}_{lim}&lt;{\theta}&lt;{\pi}-{\theta}_{lim}\)</span></p></li>
+</ul>
+</section>
+<section id="head-on-ships">
+<h3>Head-on ships<a class="headerlink" href="#head-on-ships" title="Link to this heading">#</a></h3>
+<p>The head-on ships model is applied for the following condition:</p>
+<ul class="simple">
+<li><p>A head-on exposure can only take place with two links that share the same waypoints with an opposite order and thus direction (<span class="math notranslate nohighlight">\({\theta}={\pi}\)</span>).</p></li>
+</ul>
+</section>
+<section id="overtaking-ships">
+<h3>Overtaking ships<a class="headerlink" href="#overtaking-ships" title="Link to this heading">#</a></h3>
+<p>The overtaking ships model is applied for the following condition:</p>
+<ul class="simple">
+<li><p>It is applicable for all links in an area.</p></li>
+</ul>
+</section>
+</section>
+<section id="route-bound-non-route-bound">
+<h2>Route-bound - non-route-bound<a class="headerlink" href="#route-bound-non-route-bound" title="Link to this heading">#</a></h2>
+<p>The density of non-route-bound traffic in an area is depicted by cells. Each cell can contain multiple densities, each representing an unique
+ship type and size. Interactions between these cells and the links can be identified through the intersection geometry of the cells and the
+boundaries of the normal distribution associated with the link. The normal distribution is divided into bins (polygons) with equal probability,
+resulting in multiple intersecting polygons. An example of these intersections is displayed in <a class="reference internal" href="#fig-linkcellintersection"><span class="std std-numref">Fig. 24</span></a>.</p>
+<figure class="align-center" id="id13">
+<span id="fig-linkcellintersection"></span><img alt="link_cell_intersection" src="../_images/link_cell_intersection.svg" /><figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Link cell intersection</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id2">
+<h3>Crossing ships<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>The crossing model from Eq. <a class="reference internal" href="#equation-eq-rr-num-cross">(8)</a> can also be applied here. Only special attention is needed for the
+assignment of the flow parameters <span class="math notranslate nohighlight">\(Q_i\)</span> and <span class="math notranslate nohighlight">\(Q_j\)</span>. A uniform lateral distribution of sailing ships in a cell
+is assumed. Default a uniform distribution of ship’s courses is assumed. In <a class="reference internal" href="#fig-linkcellcrossing"><span class="std std-numref">Fig. 25</span></a> a single
+intersecting polygon from <a class="reference internal" href="#fig-linkcellintersection"><span class="std std-numref">Fig. 24</span></a> is depicted. In this example we assume that <span class="math notranslate nohighlight">\(Q_i\)</span> originates
+from the link (black arrow) and <span class="math notranslate nohighlight">\(Q_j\)</span> from the cell (blue arrow). The intersecting bins are denoted with index <span class="math notranslate nohighlight">\(k\)</span> and
+the total number with <span class="math notranslate nohighlight">\(K\)</span>.</p>
+<figure class="align-center" id="id14">
+<span id="fig-linkcellcrossing"></span><img alt="link_cell_crossing" src="../_images/link_cell_crossing.svg" /><figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Crossing model applied on intersecting polygon</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The number of passages per time unit of ship <span class="math notranslate nohighlight">\(i\)</span> in bin <span class="math notranslate nohighlight">\(k\)</span> is computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-qik-rb-nrb">
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq-qik-rb-nrb" title="Link to this equation">#</a></span>\[Q_{i,k} = \frac{Q_{i}}{K}\]</div>
+<p>The number of passages per time unit of ship <span class="math notranslate nohighlight">\(j\)</span> in bin <span class="math notranslate nohighlight">\(k\)</span>, which originates from the cell density <span class="math notranslate nohighlight">\(\rho_j\)</span>
+of ship <span class="math notranslate nohighlight">\(j\)</span> is computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-qjk-rb-nrb">
+<span class="eqno">(23)<a class="headerlink" href="#equation-eq-qjk-rb-nrb" title="Link to this equation">#</a></span>\[Q_{j,k} = \frac{\rho_{j} u_j A_k}{L_k}\]</div>
+<p><span class="math notranslate nohighlight">\(A_k\)</span> is the intersecting bin area. The link length <span class="math notranslate nohighlight">\(L_k\)</span> depends on the bin width (<span class="math notranslate nohighlight">\({\Delta}y_k\)</span>) and the applicable
+crossing angle <span class="math notranslate nohighlight">\(\theta\)</span>. The density is defined as the presence ratio (<span class="math notranslate nohighlight">\(s s^{-1}\)</span>) per unit area.</p>
+<p>The link length is computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-lk-rb-nrb">
+<span class="eqno">(24)<a class="headerlink" href="#equation-eq-lk-rb-nrb" title="Link to this equation">#</a></span>\[L_k\left( \theta \right)=\frac{{\Delta}y_k}{sin(\theta)}\]</div>
+<p>A dimension analysis of Eq. <a class="reference internal" href="#equation-eq-qjk-rb-nrb">(23)</a> is given below:</p>
+<div class="math notranslate nohighlight" id="equation-eq-qjk-dim-rb-nrb">
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq-qjk-dim-rb-nrb" title="Link to this equation">#</a></span>\[\frac{s}{s m^2}\frac{m}{s} m^2 m^{-1} = s^{-1}\]</div>
+<p>This corresponds with the number of passages per time unit on a link.</p>
+</section>
+<section id="id3">
+<h3>Head-on ships<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>A cell exhibits a uniform lateral distribution, whereas the link follows a normal distribution. The sum distribution required
+to compute <span class="math notranslate nohighlight">\(P_{ij}\)</span> in Eq. <a class="reference internal" href="#equation-eq-rr-num-head">(14)</a> can only be obtained through numerical integration, specifically using the
+trapezium rule.</p>
+<div class="math notranslate nohighlight" id="equation-eq-pij-num-rb-nrb">
+<span class="eqno">(26)<a class="headerlink" href="#equation-eq-pij-num-rb-nrb" title="Link to this equation">#</a></span>\[P_{ij} = \int_{-\infty }^{\infty }f_{i}\left( y,\mu_i,\sigma_i \right)\left[ F_{j}(y+\overline{b}_{ij},y_k,{\Delta}y_k) - F_{j}(y-\overline{b}_{ij},y_k,{\Delta}y_k) \right] dy\]</div>
+<p>Where <span class="math notranslate nohighlight">\(f_{i}\)</span> represents the probability function of the ship on the link, and <span class="math notranslate nohighlight">\(F_{j}\)</span> is the cumulative distribution function
+of a uniform distribution. The integral calculates the probability that the centerline of ship <span class="math notranslate nohighlight">\(j\)</span> is within a distance of
+<span class="math notranslate nohighlight">\(\overline{b}_{ij}\)</span> from the centerline of ship <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<p>In <a class="reference internal" href="#fig-linkcellheadon"><span class="std std-numref">Fig. 26</span></a> an assessment of the bin size and number is presented. For simplicity, equally sized bins are used in this example.
+The area under the probability density function of the exposure (orange line) represents the probability of the occurrence. It can be observed
+that the discretization has no impact on the computed probability in this example. Note that the width of the slope on both sides of a probability
+density function (PDF) is equal to <span class="math notranslate nohighlight">\(\overline{b}_{ij}\)</span>.</p>
+<figure class="align-center" id="id15">
+<span id="fig-linkcellheadon"></span><img alt="link_cell_head_on" src="../_images/link_cell_head_on.svg" /><figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Head-on model applied on intersecting polygons</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Finally, the terms <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(Q_j\)</span> in Eq. <a class="reference internal" href="#equation-eq-rr-num-head">(14)</a> must be replaced to make it applicable for a cell and a link.</p>
+<div class="math notranslate nohighlight" id="equation-eq-qj-rb-nrb">
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq-qj-rb-nrb" title="Link to this equation">#</a></span>\[LQ_j = L_k P_{\theta} \left( \theta \right) \frac {\rho_j u_j A_k}{L_k}, \quad \theta \in \left[ \pi - \frac{\Delta\theta}{2}, \pi + \frac{\Delta\theta}{2} \right]\]</div>
+<p>Which can be simplified to:</p>
+<div class="math notranslate nohighlight" id="equation-eq-qj-sim-rb-nrb">
+<span class="eqno">(28)<a class="headerlink" href="#equation-eq-qj-sim-rb-nrb" title="Link to this equation">#</a></span>\[LQ_j = P_{\theta} \left( \theta \right) \rho_j u_j A_k, \quad \theta \in \left[ \pi - \frac{\Delta\theta}{2}, \pi + \frac{\Delta\theta}{2} \right]\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\Delta\theta\)</span> is the bin size of the angle between two links and <span class="math notranslate nohighlight">\(P\left( \theta \right)\)</span> is the probability that an exposure angle occurs.</p>
+</section>
+<section id="id4">
+<h3>Overtaking ships<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Only the formulation of Eq. <a class="reference internal" href="#equation-eq-qj-sim-rb-nrb">(28)</a> must be modified to make it applicable for the overtaking model.</p>
+<div class="math notranslate nohighlight" id="equation-eq-qj-sim-over-rb-nrb">
+<span class="eqno">(29)<a class="headerlink" href="#equation-eq-qj-sim-over-rb-nrb" title="Link to this equation">#</a></span>\[LQ_j = P_{\theta} \left( \theta \right) \rho_j u_j A_k, \quad \theta \in \left[ -\frac{\Delta\theta}{2}, \frac{\Delta\theta}{2} \right]\]</div>
+</section>
+</section>
+<section id="non-route-bound">
+<h2>Non-route-bound<a class="headerlink" href="#non-route-bound" title="Link to this heading">#</a></h2>
+<p>For non-route-bound traffic, only the cell density is taken into account. The exposure rates for crossing, head-on, and overtaking
+scenarios are calculated per cell. Interactions between adjacent cells are not considered.</p>
+<section id="id5">
+<h3>Crossing ships<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>The terms <span class="math notranslate nohighlight">\(Q_i\)</span> and <span class="math notranslate nohighlight">\(Q_j\)</span> in Eq. <a class="reference internal" href="#equation-eq-rr-num-cross">(8)</a> must be replaced to make it applicable to compute the crossing exposure
+rates for a cell. The other terms are only dependent on the ship particulars and the crossing angle <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-eq-qiqj-nrb-nrb">
+<span class="eqno">(30)<a class="headerlink" href="#equation-eq-qiqj-nrb-nrb" title="Link to this equation">#</a></span>\[Q_i Q_j = \frac{\rho_i u_i A}{L} \frac{\rho_j u_j A}{L}\]</div>
+<p>We assume the following relationship between the length <span class="math notranslate nohighlight">\(L\)</span> and the area <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-area-nrb-nrb">
+<span class="eqno">(31)<a class="headerlink" href="#equation-eq-area-nrb-nrb" title="Link to this equation">#</a></span>\[A = L^2\]</div>
+<p>This assumption is valid under the condition that the arbitrary polygonal domain of a cell is discretized into a finite number of smaller
+squares, allowing for the approximation of integrals or other spatial operations using a piecewise uniform representation.
+As a result Eq. <a class="reference internal" href="#equation-eq-qiqj-nrb-nrb">(30)</a> can be simplified as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-qiqj-nrb-nrb-sim">
+<span class="eqno">(32)<a class="headerlink" href="#equation-eq-qiqj-nrb-nrb-sim" title="Link to this equation">#</a></span>\[Q_i Q_j = P_{\theta} \left( \theta \right) \rho_i \rho_j u_i u_j A, \quad \theta \in \left[ 0, \pi \right]\]</div>
+<p>This results in:</p>
+<div class="math notranslate nohighlight" id="equation-eq-qiqj-nrb-nrb-sim-tot">
+<span class="eqno">(33)<a class="headerlink" href="#equation-eq-qiqj-nrb-nrb-sim-tot" title="Link to this equation">#</a></span>\[N_{cross} = \sum P_{\theta} \left( \theta \right) D_{ij} \rho_i \rho_j A u_{ij}, \quad \theta \in \left[ 0, \pi \right]\]</div>
+<p>Where <span class="math notranslate nohighlight">\(D_{ij}\)</span> and <span class="math notranslate nohighlight">\(u_{ij}\)</span> are function of <span class="math notranslate nohighlight">\(\theta\)</span>, <span class="math notranslate nohighlight">\(u_i\)</span> and <span class="math notranslate nohighlight">\(u_j\)</span>.</p>
+</section>
+<section id="id6">
+<h3>Head-on ships<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>A cell exhibits a uniform lateral distribution. The sum distribution required to compute <span class="math notranslate nohighlight">\(P_{ij}\)</span> in Eq. <a class="reference internal" href="#equation-eq-rr-num-head">(14)</a> can
+directly be obtained by the sum distribution of two uniform distributions.</p>
+<div class="math notranslate nohighlight" id="equation-eq-pij-head-nrb-nrb">
+<span class="eqno">(34)<a class="headerlink" href="#equation-eq-pij-head-nrb-nrb" title="Link to this equation">#</a></span>\[P_{ij} = \frac{1}{\Delta{y}} \left( 2\overline{b}_{ij} - \frac{{\overline{b}_{ij}}^2}{\Delta{y}} \right)\]</div>
+<p>The second term within the parentheses corresponds to the chamfers at the top of the dotted lines in <a class="reference internal" href="#fig-cellcellheadon"><span class="std std-numref">Fig. 27</span></a>. This shape arises
+because interactions with neighboring cells are not taken into account. In reality, adjacent cells with non-zero density values would be present.
+Moreover, the resulting value is relatively small compared to the cell size.</p>
+<p>Therefore, it is reasonable to simplify Eq. <a class="reference internal" href="#equation-eq-pij-head-nrb-nrb">(34)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-pij-head-nrb-nrb-sim">
+<span class="eqno">(35)<a class="headerlink" href="#equation-eq-pij-head-nrb-nrb-sim" title="Link to this equation">#</a></span>\[P_{ij} = \frac{2\overline{b}_{ij}}{\Delta{y}}\]</div>
+<figure class="align-center" id="id16">
+<span id="fig-cellcellheadon"></span><img alt="cell_cell_head_on" src="../_images/cell_cell_head_on.svg" /><figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Head-on model applied on non route bound ships</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Finally, the terms <span class="math notranslate nohighlight">\(P_{ij}\)</span>, <span class="math notranslate nohighlight">\(Q_i\)</span>, <span class="math notranslate nohighlight">\(Q_j\)</span> in Eq. <a class="reference internal" href="#equation-eq-rr-num-head">(14)</a> must be substituted by
+Eq. <a class="reference internal" href="#equation-eq-pij-head-nrb-nrb-sim">(35)</a> and Eq. <a class="reference internal" href="#equation-eq-qjk-rb-nrb">(23)</a> to make it applicable for a cell.</p>
+<div class="math notranslate nohighlight" id="equation-eq-pijlqiqj-nrb-nrb">
+<span class="eqno">(36)<a class="headerlink" href="#equation-eq-pijlqiqj-nrb-nrb" title="Link to this equation">#</a></span>\[P_{ij}LQ_iQ_j = P_{\theta} \left( \pi \right) \frac{2\overline{b}_{ij}}{\Delta{y}} L \frac{\rho_i u_i A}{L} \frac{\rho_j u_j A}{L}\]</div>
+<p>Substitute <span class="math notranslate nohighlight">\(\Delta y\)</span> with the following equation:</p>
+<div class="math notranslate nohighlight" id="equation-eq-pijlqiqj-area">
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq-pijlqiqj-area" title="Link to this equation">#</a></span>\[A = \Delta y L\]</div>
+<p>This results in:</p>
+<div class="math notranslate nohighlight" id="equation-eq-pijlqiqj-nrb-nrb-sim">
+<span class="eqno">(38)<a class="headerlink" href="#equation-eq-pijlqiqj-nrb-nrb-sim" title="Link to this equation">#</a></span>\[P_{ij}LQ_iQ_j = P_{\theta} \left( \pi \right) 2\overline{b}_{ij} \rho_i \rho_j u_i u_j A\]</div>
+<p>and:</p>
+<div class="math notranslate nohighlight" id="equation-eq-pijlqiqj-nrb-nrb-sim-tot">
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq-pijlqiqj-nrb-nrb-sim-tot" title="Link to this equation">#</a></span>\[N_{head} = P_{\theta} \left( \pi \right) 2\overline{b}_{ij} \rho_i \rho_j A \left( u_i + u_j \right)\]</div>
+<p>This is equivalent to setting <span class="math notranslate nohighlight">\(\theta=\pi\)</span> in Eq. <a class="reference internal" href="#equation-eq-qiqj-nrb-nrb-sim-tot">(33)</a>. If term <span class="math notranslate nohighlight">\(A\)</span> is omitted from Eq. <a class="reference internal" href="#equation-eq-pijlqiqj-nrb-nrb-sim-tot">(39)</a>,
+the exposure frequency per unit area is obtained.</p>
+</section>
+<section id="id7">
+<h3>Overtaking ships<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Only the formulation of Eq. <a class="reference internal" href="#equation-eq-pijlqiqj-nrb-nrb-sim">(38)</a> must be modified to make it applicable for the overtaking model.</p>
+<div class="math notranslate nohighlight" id="equation-eq-pijlqiqj-over">
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq-pijlqiqj-over" title="Link to this equation">#</a></span>\[P_{ij}LQ_iQ_j = P\left( \theta=0 \right) 2\overline{b}_{ij} \rho_i \rho_j u_i u_j A\]</div>
+<p>This results in:</p>
+<div class="math notranslate nohighlight" id="equation-eq-pijlqiqj-over-tot">
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq-pijlqiqj-over-tot" title="Link to this equation">#</a></span>\[N_{over} = P_{\theta} \left( 0 \right) 2\overline{b}_{ij} \rho_i \rho_j A \lvert u_j - u_i \rvert\]</div>
+<p>This is equivalent to setting <span class="math notranslate nohighlight">\(\theta=0\)</span> in Eq. <a class="reference internal" href="#equation-eq-qiqj-nrb-nrb-sim-tot">(33)</a>.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomenclature">Nomenclature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-models">Exposure models</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crossing-ships-model">Crossing ships model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#head-on-ships-model">Head-on ships model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overtaking-ships-model">Overtaking ships model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#route-bound">Route-bound</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crossing-ships">Crossing ships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#head-on-ships">Head-on ships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overtaking-ships">Overtaking ships</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#route-bound-non-route-bound">Route-bound - non-route-bound</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Crossing ships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Head-on ships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Overtaking ships</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-route-bound">Non-route-bound</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Crossing ships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Head-on ships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Overtaking ships</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

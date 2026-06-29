@@ -1,0 +1,17 @@
+name: samson_verification
+channels:
+  - https://proget.marin.local/conda/conda_marin_buildfarm
+  - https://proget.marin.local/conda/conda_marin_main
+  - https://proget.marin.local/conda/conda_marin_forge
+  - nodefaults
+dependencies:
+  - anaconda-marin-subsetter=2025.4
+  - python
+  - geopandas
+  - numpy
+  - pandas
+  - shapely
+  - matplotlib
+  - seaborn
+  - scipy
+  - xbench 4.7.8

@@ -1,0 +1,19 @@
+# actions usually come in the format of [action] [target] [aspect=area/traffic/exposure/event/measure] [command] [command input]
+# the actions are load/modify/save/compute
+# the targets are TrafficDataBase or a named instance(To be done)
+# In many cases one of the data base aspects must be modified, area, traffic and model. changes in area, changes in ship types or in the traffic model (e.g. increase intensity)
+
+# This example shows how to modify the area of the TrafficDataBase and inspect is visually through shapefiles
+load TrafficDataBase
+# modify TrafficDataBase area remove grid G0
+# modify TrafficDataBase area add grid G3 51.965 4.05 52.0 4.2 6 5
+# modify TrafficDataBase area add waypoint WP4 51.99680 4.02306 crossing_b 1.0
+# modify TrafficDataBase area add link L4 WP3 WP4 
+save TrafficDataBase area shapefile
+#save TrafficDataBase area csv  -> This is still on the todo list, saving it as csv in a user specified location
+#save TrafficDataBase area overwrite    -> This is still on the todo list, overwriting the current TrafficDataBase input
+
+# Compute desirable TrafficDataBase components
+compute TrafficDataBase exposure
+compute TrafficDataBase event
+save TrafficDataBase results csv

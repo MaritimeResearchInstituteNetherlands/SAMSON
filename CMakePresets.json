@@ -1,0 +1,39 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "default",
+            "binaryDir": "${sourceDir}/build",
+            "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+            "environment": {
+                "VCPKG_KEEP_ENV_VARS":     "NUGET_EXE;NUGET_PACKAGES;VCPKG_ASSET_CACHING_URL;LIB;INCLUDE;VCPKG_ROOT;VCPKG_CHECKOUT_DIR;PATH",
+                "NUGET_PACKAGES":          "${sourceDir}/vcpkg/nuget_packages"
+            }
+        },
+        { 
+            "name": "CI_CD", 
+            "inherits": [
+                "default"
+            ],
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            },
+            "environment": {
+                "X_VCPKG_ASSET_SOURCES": "clear;x-script,${sourceDir}/vcpkg/asset-provider.bat {url} {sha512} {dst};x-block-origin"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default",
+            "configurePreset": "default"
+        },
+        {
+            "name": "CI_CD",
+            "inherits": [
+                "default"
+            ],
+            "configurePreset": "CI_CD"
+        }
+  ]
+}

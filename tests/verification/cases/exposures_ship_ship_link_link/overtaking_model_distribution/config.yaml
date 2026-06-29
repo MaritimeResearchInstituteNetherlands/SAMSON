@@ -1,0 +1,17 @@
+---
+apiVersion : "0.0.2"
+inputLocation: "\\\\"
+outputLocation: "\\Results\\"
+areaModel:
+  vertices: "Area\\vertices.csv"
+  waypoints: "Area\\waypoints.csv"
+  links: "Area\\links.csv"
+trafficModel:
+  shipCategories: "Traffic\\shipcategories.csv"
+  shipsOnLinks: "Traffic\\shiplinks.csv"
+interactionModel:
+  model: "sem"
+  shipLinkData: "ModelData\\shiplinkdata.csv"
+logger:
+  fileName: "samson.log"
+  logLevel: "verbose"

@@ -1,0 +1,20 @@
+uid,type,num_vertex_uids,vertex_uids,...,elevation,description
+p01,basic_object,5,75 ,77 ,39 ,37 ,75,0,test
+p02,basic_object,5,73 ,76 ,38 ,35 ,73,0,test
+p03,basic_object,5,71 ,74 ,36 ,33 ,71,0,test
+p04,basic_object,5,69 ,72 ,34 ,31 ,69,0,test
+p05,basic_object,5,67 ,70 ,32 ,29 ,67,0,test
+p06,basic_object,5,65 ,68 ,30 ,27 ,65,0,test
+p07,basic_object,5,63 ,66 ,28 ,25 ,63,0,test
+p08,basic_object,5,61 ,64 ,26 ,23 ,61,0,test
+p09,basic_object,5,59 ,62 ,24 ,21 ,59,0,test
+p10,basic_object,5,57 ,60 ,22 ,19 ,57,0,test
+p11,basic_object,5,55 ,58 ,20 ,17 ,55,0,test
+p12,basic_object,5,53 ,56 ,18 ,15 ,53,0,test
+p13,basic_object,5,51 ,54 ,16 ,13 ,51,0,test
+p14,basic_object,5,49 ,52 ,14 ,11 ,49,0,test
+p15,basic_object,5,47 ,50 ,12 ,9 ,47,0,test
+p16,basic_object,5,45 ,48 ,10 ,7 ,45,0,test
+p17,basic_object,5,43 ,46 ,8 ,5 ,43,0,test
+p18,basic_object,5,41 ,44 ,6 ,3 ,41,0,test
+p19,basic_object,5,40 ,42 ,4 ,2 ,40,0,test

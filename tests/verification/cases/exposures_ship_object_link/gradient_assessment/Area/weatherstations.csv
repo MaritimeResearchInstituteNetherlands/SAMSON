@@ -1,0 +1,2 @@
+uid,vertex_uid,description,windstrength_table_uid,current_table_uid,tide_table_uid,tide_angle
+WS0, 0, Weather station, WST00, CT0, TT0, 0.0

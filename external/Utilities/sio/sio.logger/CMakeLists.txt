@@ -1,0 +1,1 @@
+samson_define_module(sio.logger)

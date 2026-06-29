@@ -1,0 +1,1073 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Ship-Object Exposures &#8212; samson</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=ecb8216d"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'theory/theory_exposure_shipobject';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://srcdoc.marin.nl/SAMSON/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'develop';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Causation Factors" href="theory_causation_factors.html" />
+    <link rel="prev" title="Ship-Ship Exposures" href="theory_exposure_shipship.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="develop" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="samson - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="samson - Home"/>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../references.html">
+    References
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../tests.html">
+    Tests
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tests.html">
+    Tests
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/qgis/tutorials_qgis.html">Set-up QGIS for SAMSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/qgis_anchor/tutorials_qgis_anchor.html">Anchor area geometry</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../theory.html">Theory</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="theory_conventions.html">Conventions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="theory_building_blocks.html">Building Blocks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory_area.html">Area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_ships.html">Ships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_traffic.html">Traffic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="theory_exposure_types.html">Exposure Types</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="theory_exposure_shipship.html">Ship-Ship Exposures</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Ship-Object Exposures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="theory_causation_factors.html">Causation Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory_measures.html">Measures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tests.html">Tests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/exposures_ship_ship.html">Ship-Ship Exposures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/index.html">Link-Link</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/crossing_model/documentation.html">Crossing Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/crossing_model_multiple_links/documentation.html">Crossing Model with Multiple Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/head-on_model/documentation.html">Head-on Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/head-on_model_distribution/documentation.html">Head-on Model Distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/link_discretization_0/documentation.html">Discretization of Multiple Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/link_discretization_1/documentation.html">Discretization of a Single Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/overtaking_model/documentation.html">Overtaking Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/overtaking_model_distribution/documentation.html">Overtaking Model Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_cell/index.html">Cell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_cell/specified_heading/documentation.html">Specified Heading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_cell/uniform_heading/documentation.html">Uniform Heading Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/index.html">Link-Cell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/rotating_link_within_cell/documentation.html">Rotating Link in Cell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/sliding_distribution_link/documentation.html">Sliding Distribution of Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/sliding_link_over_two_cells/documentation.html">Sliding Link over Two Cells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/sliding_link_through_cell/documentation.html">Sliding Link through Cell</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/events_ship_ship.html">Ship-Ship Events</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/events_ship_ship/index.html">Causation Factors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/events_ship_ship/causation_factors/documentation.html">Striking and Struck Probability</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/collisions_ship_ship.html">Ship-Ship Collisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/exposures_ship_object.html">Ship-Object Exposures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/index.html">Link-Object</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/gradient_assessment/documentation.html">Drift and Ram Exposure Gradients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/large_object/documentation.html">Large Object Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/link_discretization/documentation.html">Link Discretization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/object_discretization/documentation.html">Ram Object Discretization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/object_elevation/documentation.html">Object Elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/ram_delta_y/documentation.html">Ram Verification for Gridlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/rotating_objects/documentation.html">Rotating Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/sliding_link/documentation.html">Sliding objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/sublink_test/documentation.html">Sublink test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/tidal_test/documentation.html">Tide Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/wind_vs_current/documentation.html">Wind versus Current</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_cell/index.html">Cell-Object</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_cell/direction_probabilities/documentation.html">Verifying ram and drift direction probabilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_cell/sliding_cell_through_object/documentation.html">Sliding Cell through Object</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/events_ship_object.html">Ship-Object Events</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/events_ship_object/index.html">Causation Factors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/events_ship_object/causation_factors/documentation.html">Drift and Ram Causation Factors</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/collisions_ship_object.html">Ship-Object Collisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/index.html">Measures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/drift_quantification/documentation.html">Drift Collision Quantification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/measure_anchor_function/documentation.html">Drift Anchor Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/measure_engine_repair_function/documentation.html">Drift Engine Repair Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/minimum_passing_distance/documentation.html">Minimum passing distance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_cheatsheet.html">Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../user_guide.html" class="nav-link">User Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../theory.html" class="nav-link">Theory</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="theory_exposure_types.html" class="nav-link">Exposure Types</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Ship-Object Exposures</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="admonition warning" id="theory-exposures-shipobject">
+<p class="admonition-title">Warning</p>
+<p>Under Development</p>
+</div>
+<section id="ship-object-exposures">
+<h1>Ship-Object Exposures<a class="headerlink" href="#ship-object-exposures" title="Link to this heading">#</a></h1>
+<p>A ship may collide with a static object located within an <a class="reference internal" href="theory_area.html#theory-area"><span class="std std-ref">area</span></a>. Such collisions can result from either drifting or ramming, both of
+which are explained in the following sections. The potential for a ship-object exposure is quantified as ‘danger miles’—the portion of a link or cell
+where a collision will occur if the vessel exits the traffic lane and no preventive measures are taken.</p>
+<p>A drift collision occurs as a result of an uncontrollable event, such as an engine failure, which causes the ship to lose propulsion and begin drifting. This
+failure can happen at any location at sea. Once the disturbance occurs, the vessel becomes disabled and starts drifting in a specific direction at a speed
+determined by environmental conditions such as wind, waves, and currents. A drifting vessel may pose a threat to static objects at sea. If the ship drifts
+toward such an object and no effective countermeasures are taken in time, a collision may occur. Although the drift speed is typically low, the impact can
+still cause significant damage to both the object and the vessel due to the ship’s mass and momentum.</p>
+<p>A ram collision, on the other hand, is typically the result of navigational or human error. For example, the navigator may have temporarily left the bridge
+and, upon returning, discovers that the vessel is on a collision course with a stationary object. In such cases, emergency maneuvers—such as a hard turn or
+setting the engine to “Full Astern”—may be attempted to avoid impact. Contributing factors to such errors include medical emergencies (e.g., heart attacks),
+intoxication, fatigue, or sleep deprivation. In rare cases, more severe causes such as gross negligence or intentional actions (e.g., suicidal behavior) may
+be involved.</p>
+<section id="nomenclature">
+<h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mu_{\theta}\)</span></p></td>
+<td><p>Mean value of ram heading distribution</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mu_{y}\)</span></p></td>
+<td><p>Mean value of lateral distribution for a link-ship pair</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma_{\theta}\)</span></p></td>
+<td><p>Standard deviation of ram heading distribution</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sigma_{y}\)</span></p></td>
+<td><p>Standard deviation of lateral distribution for a link-ship pair</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta_{drift}\)</span></p></td>
+<td><p>The ship’s drift heading</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta_{wind}\)</span></p></td>
+<td><p>Wind heading</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta_{j,min}\)</span></p></td>
+<td><p>Lower boundary of the ram exposure heading for object <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta_{j,max}\)</span></p></td>
+<td><p>Upper boundary of the ram exposure heading for object <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\boldsymbol{e}_{\textrm{current}}\)</span></p></td>
+<td><p>2D unit vector of the current velocity in the area</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\boldsymbol{e}_{\textrm{drift}}\)</span></p></td>
+<td><p>2D unit vector of the ship’s (drift) velocity</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\boldsymbol{e}_{\textrm{wind}}\)</span></p></td>
+<td><p>2D unit vector of the wind velocity in the area</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v_{\textrm{current}}\)</span></p></td>
+<td><p>Current speed in the area</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_{\textrm{drift}}\)</span></p></td>
+<td><p>Drift speed of the ship</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v_{\textrm{drag}}\)</span></p></td>
+<td><p>Wind speed in the area</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(N_{ram}\)</span></p></td>
+<td><p>Ram exposure frequency</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(P_{i}\)</span></p></td>
+<td><p>Lateral probability for sub-link <span class="math notranslate nohighlight">\(i\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{k}\)</span></p></td>
+<td><p>Heading probability for bin <span class="math notranslate nohighlight">\(k\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q\)</span></p></td>
+<td><p>Passing ships on a link per type and time unit</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(S_{k}\)</span></p></td>
+<td><p>Projected length on the sub-link of bin <span class="math notranslate nohighlight">\(k\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Link to this heading">#</a></h2>
+<p>The ship is geometrically represented by a rectangular block. This ship has the following attributes: width, length, draft, height and speed.</p>
+<p>An object is represented by a polygon in the horizontal plane. The polygon has the following attributes: type, elevation and shielding (true/false).</p>
+</section>
+<section id="ram-exposure-model">
+<h2>RAM Exposure Model<a class="headerlink" href="#ram-exposure-model" title="Link to this heading">#</a></h2>
+<p>The heading distibution for a ram event is given by a table. In total seven (7) headings are considered.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Course deviation compared to link heading [deg]</p></th>
+<th class="head"><p>Probability [-]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-30</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>-20</p></td>
+<td><p>0.10</p></td>
+</tr>
+<tr class="row-even"><td><p>-10</p></td>
+<td><p>0.20</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>0.30</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>0.20</p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p>0.10</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>0.05</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For practical reasons this table has been converted into a continuous probability density function. This
+normal distribution fit is depicted in <a class="reference internal" href="#fig-shipobjectramdis"><span class="std std-numref">Fig. 28</span></a>.</p>
+<figure class="align-center" id="id8">
+<span id="fig-shipobjectramdis"></span><img alt="ship_object_ram_dis" src="../_images/ram_distribution.svg" /><figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Normal distribution fit from tabular ram heading data</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="drift-exposure-model">
+<h2>Drift Exposure Model<a class="headerlink" href="#drift-exposure-model" title="Link to this heading">#</a></h2>
+<p>The drift velocity of a ship is decomposed into three distinct components:</p>
+<div class="math notranslate nohighlight" id="equation-eq-ve-drift">
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq-ve-drift" title="Link to this equation">#</a></span>\[v_{\textrm{drift}} \boldsymbol{e}_{\textrm{drift}} =
+v_{\textrm{current}} \boldsymbol{e}_{\textrm{current}}
++ v_{\textrm{drag}} \boldsymbol{e}_{\textrm{wind}}
++ v_{\textrm{tide}} \boldsymbol{e}_{\textrm{drift}}\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\boldsymbol{e}\)</span> represent a unit direction vector, <span class="math notranslate nohighlight">\(|\boldsymbol{e}| = 1\)</span>. The tide is only taken in the direction of the drift
+velocity. This can be rewritten as</p>
+<div class="math notranslate nohighlight" id="equation-eq-ve-drift-tide">
+<span class="eqno">(43)<a class="headerlink" href="#equation-eq-ve-drift-tide" title="Link to this equation">#</a></span>\[(v_{\textrm{drift}} - v_{\textrm{tide}})\boldsymbol{e}_{\textrm{drift}} =
+v_{\textrm{current}} \boldsymbol{e}_{\textrm{current}}
++ v_{\textrm{drag}} \boldsymbol{e}_{\textrm{wind}}\]</div>
+<p>Divide by <span class="math notranslate nohighlight">\(v_{\textrm{drag}}\)</span> Renaming the first part to <span class="math notranslate nohighlight">\(v_e\)</span> yields</p>
+<div class="math notranslate nohighlight" id="equation-eq-ve-equation">
+<span class="eqno">(44)<a class="headerlink" href="#equation-eq-ve-equation" title="Link to this equation">#</a></span>\[v_{\textrm{e}} \boldsymbol{e}_{\textrm{drift}} =
+R \boldsymbol{e}_{\textrm{current}}
++ \boldsymbol{e}_{\textrm{wind}},\]</div>
+<p>with <span class="math notranslate nohighlight">\(R = \frac{v_{\textrm{current}}}{v_{\textrm{drag}}}\)</span>. Given a drift angle, windscale <span class="math notranslate nohighlight">\(S\)</span> and a current <span class="math notranslate nohighlight">\(C\)</span>, the
+values for the current and drag velocties can be computed as well as the current direction. It is assumed that in most cases the tide
+is not a dominant contributor and on average is zero. This leaves the equation with two unknowns, <span class="math notranslate nohighlight">\(v_{\textrm{e}}\)</span> and the angle
+of the wind <span class="math notranslate nohighlight">\(\theta_{\textrm{wind}}\)</span>. In theory this system can be solved, however it is possible that there is no solution.
+This is the case when the drag velocity can not overcome the current velocity in the orthogonal drift direction. This implies
+that the ship can never drift into the direction of the chosen drift angle and the probability of drifting in that directin is zero.</p>
+<section id="finding-the-wind-angle">
+<h3>Finding the wind angle<a class="headerlink" href="#finding-the-wind-angle" title="Link to this heading">#</a></h3>
+<p>To compute this system of equations first multiply Eq. <a class="reference internal" href="#equation-eq-ve-equation">(44)</a> with <span class="math notranslate nohighlight">\(\boldsymbol{e}_{\textrm{drift}}\)</span> and noting that the
+dot product between the same unit vectors is one, leading to</p>
+<div class="math notranslate nohighlight" id="equation-eq-ve-one">
+<span class="eqno">(45)<a class="headerlink" href="#equation-eq-ve-one" title="Link to this equation">#</a></span>\[v_e = R a_0 + a_1,\]</div>
+<p>with <span class="math notranslate nohighlight">\(a_0 = \boldsymbol{e}_{\textrm{current}} \cdot \boldsymbol{e}_{\textrm{drift}}\)</span> and <span class="math notranslate nohighlight">\(a_1 = \boldsymbol{e}_{\textrm{wind}} \cdot \boldsymbol{e}_{\textrm{drift}}\)</span>.
+This can be repeated by multiplying Eq. <a class="reference internal" href="#equation-eq-ve-equation">(44)</a> with <span class="math notranslate nohighlight">\(\boldsymbol{e}_{\textrm{current}}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{e}_{\textrm{wind}}\)</span> leading
+to the equations</p>
+<div class="math notranslate nohighlight" id="equation-eq-ve-two">
+<span class="eqno">(46)<a class="headerlink" href="#equation-eq-ve-two" title="Link to this equation">#</a></span>\[v_e a_0 = R + a_2\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-ve-three">
+<span class="eqno">(47)<a class="headerlink" href="#equation-eq-ve-three" title="Link to this equation">#</a></span>\[v_e a_1 = R a_2 + 1\]</div>
+<p>where <span class="math notranslate nohighlight">\(a_2 = \boldsymbol{e}_{\textrm{current}} \cdot \boldsymbol{e}_{\textrm{wind}}\)</span>.</p>
+<p>Next <span class="math notranslate nohighlight">\(v_e\)</span> can be eliminated be substituting Eq. <a class="reference internal" href="#equation-eq-ve-one">(45)</a> into Eq. <a class="reference internal" href="#equation-eq-ve-two">(46)</a> and Eq. <a class="reference internal" href="#equation-eq-ve-three">(47)</a>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-r-one">
+<span class="eqno">(48)<a class="headerlink" href="#equation-eq-r-one" title="Link to this equation">#</a></span>\[R a_0^2 + a_0 a_1 = R + a_2\]</div>
+<p>and,</p>
+<div class="math notranslate nohighlight" id="equation-eq-r-two">
+<span class="eqno">(49)<a class="headerlink" href="#equation-eq-r-two" title="Link to this equation">#</a></span>\[R a_0 a_1 + a_1^2 =  R a_2 + 1\]</div>
+<p>Note that Eq. <a class="reference internal" href="#equation-eq-r-one">(48)</a> can eliminate <span class="math notranslate nohighlight">\(a_2\)</span> from Eq. <a class="reference internal" href="#equation-eq-r-two">(49)</a> in a straightforward manner,</p>
+<div class="math notranslate nohighlight" id="equation-eq-solution">
+<span class="eqno">(50)<a class="headerlink" href="#equation-eq-solution" title="Link to this equation">#</a></span>\[a_1^2 = R^2 (a_0^2 - 1) + 1.\]</div>
+<p>The variable <span class="math notranslate nohighlight">\(a_1\)</span> is now expressed in known quantities and the system is solved. The wind direction vector can now be computed by
+combining Eq. <a class="reference internal" href="#equation-eq-solution">(50)</a>, Eq. <a class="reference internal" href="#equation-eq-ve-one">(45)</a> and Eq. <a class="reference internal" href="#equation-eq-ve-equation">(44)</a>. Taking the atan2 of this vector will yield
+the angle.</p>
+<p>It is possible that <span class="math notranslate nohighlight">\(a_1^2\)</span> becomes negative. In these cases there exist no solution. Those are cases where
+<span class="math notranslate nohighlight">\(v_{\textrm{current}}\)</span> and <span class="math notranslate nohighlight">\(v_{\textrm{drag}}\)</span> can not compensate the velocity components in the orthogonal direction
+of <span class="math notranslate nohighlight">\(\boldsymbol{e}_{\textrm{drift}}\)</span>. The limitig value of the ratio of these velocities can be estimated by setting <span class="math notranslate nohighlight">\(a_1\)</span> to zero
+in Eq. <a class="reference internal" href="#equation-eq-solution">(50)</a>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-rlim">
+<span class="eqno">(51)<a class="headerlink" href="#equation-eq-rlim" title="Link to this equation">#</a></span>\[R_{\textrm{lim}} = \sqrt{\frac{1}{1 - a_0^2}}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(a_0 \in [-1,1]\)</span> and so <span class="math notranslate nohighlight">\(R_{\mathrm{lim}} \in [1,\infty]\)</span>. When <span class="math notranslate nohighlight">\(R &lt; 1\)</span> the solution is always stable.
+In cases where <span class="math notranslate nohighlight">\(R &gt; R_{\mathrm{lim}}\)</span> there will be no net velocity in the direction of the drift angle possible and hence any
+given winddirection will give no collision. These drift angles can be neglected. Observe that this equation can also be reverted,
+solving for the admissible <span class="math notranslate nohighlight">\(a_0\)</span> values given the current and drag velocities.</p>
+<p>An alternative way to compute the angle, without resorting to vectors is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-b1">
+<span class="eqno">(52)<a class="headerlink" href="#equation-eq-b1" title="Link to this equation">#</a></span>\[b_1 = - R (\boldsymbol{e}_{\textrm{current}} \times \boldsymbol{e}_{\textrm{drift}}),\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-theta">
+<span class="eqno">(53)<a class="headerlink" href="#equation-eq-theta" title="Link to this equation">#</a></span>\[\theta_{\mathrm{wind}} = \theta_{\mathrm{drift}} - \textrm{atan2}(b1,a1)\]</div>
+<p>It can be proven that there is only one solution when <span class="math notranslate nohighlight">\(R &lt; 1\)</span>, which is that <span class="math notranslate nohighlight">\(a_1\)</span> must be positive. Take Eq. <a class="reference internal" href="#equation-eq-ve-equation">(44)</a> and consider
+these possible solutions for postive <span class="math notranslate nohighlight">\(v_e\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-eq-sqrt">
+<span class="eqno">(54)<a class="headerlink" href="#equation-eq-sqrt" title="Link to this equation">#</a></span>\[\sqrt{R^2 a_0^2 } \pm \sqrt{R^2 + a_0^2 - R^2 + 1} \geq 0.\]</div>
+<p>Now observe that <span class="math notranslate nohighlight">\(\sqrt{R^2 + a_0^2 - R^2 + 1} \geq \sqrt{R^2 a_0^2 }\)</span> when <span class="math notranslate nohighlight">\(- R^2 + 1 &gt; 0\)</span>. In that case the negative case
+is invalid and hence for <span class="math notranslate nohighlight">\(R \leq 1\)</span> only the positive solution is valid. Now consider the case where <span class="math notranslate nohighlight">\(R &gt; 1\)</span>, then
+<span class="math notranslate nohighlight">\(\sqrt{R^2 + a_0^2 - R^2 + 1} \leq \sqrt{R^2 a_0^2 }\)</span> implying that both solutions are always valid.</p>
+</section>
+<section id="tide-velocity">
+<h3>Tide velocity<a class="headerlink" href="#tide-velocity" title="Link to this heading">#</a></h3>
+<p>The tide is modeled by a set of frequencies which is obtained from tidal measurements. The most dominating frequenties generate a
+beating pattern with frequency of <span class="math notranslate nohighlight">\(\frac{f_2 - f_1}{2}\)</span> which has a period generally in the range of a month. At <span class="math notranslate nohighlight">\(N_{\mathrm{steps}}\)</span>
+along this frequency, local simulations are performed in which the velocity is integrated numerically for 24 hours with a time-step of 1
+hour. If the distance never exceeds the distance to the target object then there will be no collision.</p>
+<p>The route bound and the non-route bound procedures are discussed in the next two sections.</p>
+</section>
+</section>
+<section id="route-bound">
+<h2>Route Bound<a class="headerlink" href="#route-bound" title="Link to this heading">#</a></h2>
+<p>To calculate exposure frequencies for route-bound traffic, the following steps are performed:</p>
+<ol class="arabic simple">
+<li><p><strong>Axis-Aligned Bounding Box (AABB) Filter</strong> Filters geometry using axis-aligned boundaries to simplify spatial analysis.</p></li>
+<li><p><strong>Polygon Filter</strong> Refines geometry filtering by considering link orientation and ram course.</p></li>
+<li><p><strong>Lateral Bins</strong> Analyzes and prepares the lateral sub-links for further spatial operations.</p></li>
+<li><p><strong>Boundaries</strong> Analyzes and prepares the heading range for further spatial operations.</p></li>
+<li><p><strong>Exposures no Shielding</strong> Calculates the exposure frequency based on the processed spatial data for each seperate object.</p>
+<ol class="arabic simple">
+<li><p><strong>Projections</strong> Creates bins based on the calculated boundaries and performs projections that serve as input for exposure analysis.</p></li>
+<li><p><strong>Elevation Filter</strong> Identifies and excludes object/ship type combinations that cannot result in exposure due to elevation constraints.</p></li>
+<li><p><strong>Exposures</strong> Computes the exposure frequencies for unique link/object/ship type combinations.</p></li>
+</ol>
+</li>
+<li><p><strong>Exposures with Shielding</strong> Calculates the exposure frequency, taking into account shielding effects with all objects.</p>
+<ol class="arabic simple">
+<li><p><strong>Bins</strong> Creates bins based on the calculated boundaries</p></li>
+<li><p><strong>Elevation Filter</strong> Filters out object/ship type combinations that are not exposed due to elevation constraints, and identifies relevant bins and objects for evaluation.</p></li>
+<li><p><strong>Projections</strong> Performs projections that serve as input for exposure analysis.</p></li>
+<li><p><strong>Exposures</strong> Computes the exposure frequencies for unique link/object/ship type combinations.</p></li>
+</ol>
+</li>
+</ol>
+<p>The following sections provide a more detailed explanation of each step.</p>
+<section id="aabb-filter">
+<h3>AABB Filter<a class="headerlink" href="#aabb-filter" title="Link to this heading">#</a></h3>
+<p>An axis-aligned bounding box can be constructed to enclose a link. By applying an offset to this box, nearby objects within the
+surrounding area can be filtered. This offset must be reasonably considered in the analysis, especially for ships that may deviate
+from the link and potentially collide with these objects. This offset is set at <span class="math notranslate nohighlight">\(2.0e+004m\)</span>. Objects whose vertices lie
+entirely outside the AABB (<a class="reference internal" href="#fig-shipobjectramaabb"><span class="std std-numref">Fig. 29</span></a>) are filtered out and excluded from subsequent processing.</p>
+<figure class="align-center" id="id9">
+<span id="fig-shipobjectramaabb"></span><img alt="ship_object_ram_aabb" src="../_images/ram_aabb.svg" /><figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Axis-Aligned Bounding Box (AABB) Filter</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="polgon-filter">
+<h3>Polgon Filter<a class="headerlink" href="#polgon-filter" title="Link to this heading">#</a></h3>
+<p>To further reduce the number of considered exposures, a second spatial filter is applied. It is reasonable to assume that
+the ramming direction relative to the link heading falls within the range of −0.7587 rad to +0.7587 rad. This interval corresponds
+to <span class="math notranslate nohighlight">\(3\sigma\)</span> of the normal distribution.</p>
+<p>Using these constraints, a polygonal region can be constructed with the radius from the AABB filter. Any object whose
+vertices lie entirely outside this polygon (<a class="reference internal" href="#fig-shipobjectrampolygon"><span class="std std-numref">Fig. 30</span></a>) is excluded from further analysis.</p>
+<figure class="align-center" id="id10">
+<span id="fig-shipobjectrampolygon"></span><img alt="ship_object_ram_polygon" src="../_images/ram_polygon.svg" /><figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Polygon Filter</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="lateral-bins">
+<h3>Lateral Bins<a class="headerlink" href="#lateral-bins" title="Link to this heading">#</a></h3>
+<p>The lateral distribution for each ship–link combination is provided as input, modeled using a normal distribution defined by parameters
+<span class="math notranslate nohighlight">\(\mu_{y}\)</span> and <span class="math notranslate nohighlight">\(\sigma_{y}\)</span>. To discretize the lateral regions for further analysis, the minimum and maximum values across all ship
+types, spanning <span class="math notranslate nohighlight">\(\pm3\sigma_{y}\)</span>, are used to define a rectangular area. This area is then divided into equally sized bins
+(denoted by index <span class="math notranslate nohighlight">\(i\)</span> and see <a class="reference internal" href="#fig-shipobjectramlatbin"><span class="std std-numref">Fig. 31</span></a>) to enable structured evaluation of the exposure. The discretization
+approach is consistently applied across
+all objects under consideration.</p>
+<figure class="align-center" id="id11">
+<span id="fig-shipobjectramlatbin"></span><img alt="ship_object_ram_lat_bins" src="../_images/ram_lat_bins.svg" /><figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Lateral bins of a link</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="boundaries">
+<h3>Boundaries<a class="headerlink" href="#boundaries" title="Link to this heading">#</a></h3>
+<p>Assess whether the object (<span class="math notranslate nohighlight">\(j\)</span>) intersects with the link (<span class="math notranslate nohighlight">\(i\)</span>) by analyzing their geometric overlap. Identifying such intersections
+is essential for subsequent geometry processing and ensures that relevant spatial interactions are correctly captured.</p>
+<p>Hereafter the interaction boundaries for each lateral link (<span class="math notranslate nohighlight">\(i\)</span>) with object (<span class="math notranslate nohighlight">\(j\)</span>) are computed. These boundaries are computed
+for each valid (<span class="math notranslate nohighlight">\(ij\)</span>) pair.</p>
+<p>The procedure can described as follows:</p>
+<ol class="arabic simple">
+<li><p>Construct vectors from the start point of the link to each vertex of the object</p></li>
+<li><p>In case of no intersection between link and object:</p>
+<ul class="simple">
+<li><p>Construct vectors from the end point of the link to each vertex of the object</p></li>
+<li><p>Group the vectors originating from the start- and end point and calculate the lower and upper boundary angles
+(see <a class="reference internal" href="#fig-shipobjectramobjbound"><span class="std std-numref">Fig. 32</span></a>), incorporating clipping based on the <span class="math notranslate nohighlight">\(\pm3\sigma\)</span> range of the heading distribution.</p></li>
+</ul>
+</li>
+<li><p>In case of intersection between link and object:</p>
+<ul class="simple">
+<li><p>Group the vectors originating from the start point and calculate the lower and upper boundary angles, incorporating clipping based on
+the <span class="math notranslate nohighlight">\(\pm3\sigma\)</span> range of the heading distribution.</p></li>
+</ul>
+</li>
+</ol>
+<figure class="align-center" id="id12">
+<span id="fig-shipobjectramobjbound"></span><img alt="ship_object_ram_obj_bound" src="../_images/ram_obj_bound.svg" /><figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Link object pair boundaries</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="exposures-no-shielding">
+<h3>Exposures no Shielding<a class="headerlink" href="#exposures-no-shielding" title="Link to this heading">#</a></h3>
+<p>All ship types labeled as ‘unshielded’ must adhere to the procedures outlined in this section and are exempt from those described in the ‘Exposures with Shielding’ section.</p>
+<section id="projections">
+<h4>Projections<a class="headerlink" href="#projections" title="Link to this heading">#</a></h4>
+<p>The following steps are executed to compute the distance and projected segment on the link:</p>
+<ol class="arabic simple">
+<li><p>Make an angle discretization (bins) within the saved boundaries. An equal bin size with a maximum bin size is applied.</p></li>
+<li><p>Compute for the centroids of the bins (k)</p></li>
+<li><p>Compute the rays from the object on the sub-link</p></li>
+<li><p>Compute the projected length (<span class="math notranslate nohighlight">\(S_{k}\)</span>) on the sub-link</p></li>
+<li><p>Compute the weighed bare distance (<span class="math notranslate nohighlight">\(D_{k}\)</span>) from sub-link to object</p></li>
+<li><p>Store for each unique sub-link/object/bin group: <span class="math notranslate nohighlight">\(S_{k}\)</span>, <span class="math notranslate nohighlight">\(D_{k}\)</span></p></li>
+</ol>
+<figure class="align-center" id="id13">
+<span id="fig-shipobjectrambin"></span><img alt="ship_object_ram_bin" src="../_images/ram_bin.svg" /><figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Bin computation</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="elevation-filter">
+<h4>Elevation Filter<a class="headerlink" href="#elevation-filter" title="Link to this heading">#</a></h4>
+<p>Spatial elevation filtering involves restricting the analysis to ship objects pairs, where the object elevation is within the vertical range
+of the ship type. This technique is particularly useful when assessing potential interactions between ships and surrounding objects, such as
+bridges, overhead structures, or bathymetry. No exposure can occur if the object’s elevation exceeds the ship type’s height or falls below its
+draft.</p>
+</section>
+<section id="exposures">
+<h4>Exposures<a class="headerlink" href="#exposures" title="Link to this heading">#</a></h4>
+<p>The exposure frequency is determined for each unique set comprising a link, sub-link, object, projection direction (bin) and ship type.</p>
+<p>Each sub-link represents a segment of the lateral area adjacent to the main link. Based on the link-ship parameters <span class="math notranslate nohighlight">\(\mu_{y}\)</span> and <span class="math notranslate nohighlight">\(\sigma_{y}\)</span>,
+the probability of a ship type occupying a specific lateral position can be calculated using:</p>
+<div class="math notranslate nohighlight" id="equation-eq-ram-prob-lateral">
+<span class="eqno">(55)<a class="headerlink" href="#equation-eq-ram-prob-lateral" title="Link to this equation">#</a></span>\[P_{i}(y) = \int ^{+y_{i}} _{-y_{i}} g(y)dy\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\pm y_{i}\)</span> defines the boundaries of the sub-link bin’s width.</p>
+<p>Function <span class="math notranslate nohighlight">\(f\)</span> is the ram heading distribution function. The probability is computed with the integral between the minimum and maximum
+<span class="math notranslate nohighlight">\(\theta\)</span> values of bin <span class="math notranslate nohighlight">\(k\)</span>. The link heading serves as the value of <span class="math notranslate nohighlight">\(mu_{\theta}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-eq-ram-prob-heading">
+<span class="eqno">(56)<a class="headerlink" href="#equation-eq-ram-prob-heading" title="Link to this equation">#</a></span>\[P_{k}(\theta) = \int ^{+\theta_{k}} _{-\theta_{k}} f(\theta)d\theta\]</div>
+<p>The exposure frequency is computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-ram-exp">
+<span class="eqno">(57)<a class="headerlink" href="#equation-eq-ram-exp" title="Link to this equation">#</a></span>\[N_{ram} = P_{i}P_{k}S_{k}Q\]</div>
+<p>Where <span class="math notranslate nohighlight">\(S_{k}\)</span> is the length of the projected geometry of object <span class="math notranslate nohighlight">\(j\)</span> on sublink <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> the frequency of a passing
+ship type. Each bin <span class="math notranslate nohighlight">\(k\)</span> contains a value pair consisting of the projected length <span class="math notranslate nohighlight">\(S_{k}\)</span> and the corresponding ram distance
+<span class="math notranslate nohighlight">\(D_{k}\)</span>. Subsequently, the <span class="math notranslate nohighlight">\(D_{k}\)</span> is paired with the ram exposure value. The ram distance is used in evaluating the effectiveness
+of the mitigation measure, if enabled.</p>
+<p>The dimension of the ram exposure variable is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-ram-exp-dim">
+<span class="eqno">(58)<a class="headerlink" href="#equation-eq-ram-exp-dim" title="Link to this equation">#</a></span>\[N_{ram} = \frac{m}{s}\]</div>
+<p>Exposure refers to the number of meters traversed per second, assuming ships depart from a link following a specified heading distribution
+and collide with an object if no mitigation measures are taken.
+To account for the probability of a ship departing the link, a causation factor is applied. This results in the calculation of the event
+frequency. When mitigation measures are enabled, the collision frequency will be reduced compared to the event frequency.</p>
+</section>
+</section>
+<section id="exposures-with-shielding">
+<h3>Exposures with Shielding<a class="headerlink" href="#exposures-with-shielding" title="Link to this heading">#</a></h3>
+<p>All ship types labeled as ‘Shielded’ must adhere to the procedures outlined in this section.</p>
+<section id="bins">
+<h4>Bins<a class="headerlink" href="#bins" title="Link to this heading">#</a></h4>
+<p>TBD</p>
+</section>
+<section id="id1">
+<h4>Elevation Filter<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>TBD</p>
+</section>
+<section id="id2">
+<h4>Projections<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>TBD</p>
+</section>
+<section id="id3">
+<h4>Exposures<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<p>TBD</p>
+</section>
+</section>
+</section>
+<section id="non-route-bound">
+<h2>Non-route Bound<a class="headerlink" href="#non-route-bound" title="Link to this heading">#</a></h2>
+<p>TBD</p>
+<section id="id4">
+<h3>AABB Filter<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>TBD</p>
+</section>
+<section id="polygon-filter">
+<h3>Polygon Filter<a class="headerlink" href="#polygon-filter" title="Link to this heading">#</a></h3>
+<p>TBD</p>
+</section>
+<section id="process-geometry">
+<h3>Process Geometry<a class="headerlink" href="#process-geometry" title="Link to this heading">#</a></h3>
+<p>TBD</p>
+</section>
+<section id="id5">
+<h3>Elevation Filter<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>TBD</p>
+</section>
+<section id="id6">
+<h3>Exposures no Shielding<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>TBD</p>
+</section>
+<section id="id7">
+<h3>Exposures with Shielding<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>TBD</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomenclature">Nomenclature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ram-exposure-model">RAM Exposure Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drift-exposure-model">Drift Exposure Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-wind-angle">Finding the wind angle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tide-velocity">Tide velocity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#route-bound">Route Bound</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aabb-filter">AABB Filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polgon-filter">Polgon Filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lateral-bins">Lateral Bins</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boundaries">Boundaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exposures-no-shielding">Exposures no Shielding</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#projections">Projections</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elevation-filter">Elevation Filter</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exposures">Exposures</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exposures-with-shielding">Exposures with Shielding</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bins">Bins</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Elevation Filter</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Projections</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exposures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-route-bound">Non-route Bound</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">AABB Filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polygon-filter">Polygon Filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#process-geometry">Process Geometry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Elevation Filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Exposures no Shielding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Exposures with Shielding</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

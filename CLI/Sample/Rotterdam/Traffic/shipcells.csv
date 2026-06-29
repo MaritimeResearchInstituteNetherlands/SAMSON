@@ -1,0 +1,5 @@
+uid,ship_category_uid,cell_uid,celldata_uid
+sc0,scat0,C1,scd0
+sc1,scat1,C1,scd1
+sc2,scat1,C2,scd1
+sc3,scat1,C2,scd1

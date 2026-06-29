@@ -1,0 +1,7 @@
+run = ["python main.py"]
+check = "check.py"
+domain_opt_in = []
+domain_opt_out = []
+point_of_contact = "MARIN"
+externals = [ "../../",]
+

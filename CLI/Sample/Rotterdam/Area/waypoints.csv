@@ -1,0 +1,5 @@
+uid,vertex_uid,description,radius
+WP0, 3, left starting point, 100.0
+WP1, 2, right starting point, 40.0
+WP2, 1, crossing point, 120.0
+WP3, 0, end point, 80.0

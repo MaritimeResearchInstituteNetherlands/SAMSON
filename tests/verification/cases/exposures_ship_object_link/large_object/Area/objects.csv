@@ -1,0 +1,10 @@
+uid,type,num_vertices,vertex_0,vertex_1,vertex_2,vertex_3,vertex_4,description
+OB0000,platform,5,28 ,24 ,36 ,39 ,28,test
+OB0001,platform,5,30 ,22 ,32 ,41 ,30,test
+OB0002,platform,5,33 ,20 ,26 ,43 ,33,test
+OB0003,platform,5,35 ,18 ,23 ,45 ,35,test
+OB0004,platform,5,34 ,17 ,21 ,44 ,34,test
+OB0005,platform,5,31 ,15 ,19 ,42 ,31,test
+OB0006,platform,5,29 ,13 ,16 ,40 ,29,test
+OB0007,platform,5,27 ,11 ,14 ,38 ,27,test
+OB0008,platform,5,25 ,10 ,12 ,37 ,25,test

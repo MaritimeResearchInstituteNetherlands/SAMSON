@@ -1,0 +1,4 @@
+uid,table_uid,velocity,angle,probability
+0, CT0,0.0,0.0,0.4
+1, CT0,2.0,1.0,0.6
+2, CT1,1.0,3.0,1.0

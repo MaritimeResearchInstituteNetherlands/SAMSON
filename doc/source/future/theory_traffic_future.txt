@@ -1,0 +1,104 @@
+.. _`theory_traffic_future`:
+
+Traffic Future
+==============
+
+Nomenclature
+------------
+
++-------------------+---------------------------------------------------------------------------------------+
+| Symbol            | Meaning                                                                               |
++===================+=======================================================================================+
+| :math:`{\Delta}t` | Delta time corresponding with the time unit of the observation                        |
++-------------------+---------------------------------------------------------------------------------------+
+| :math:`m`         | Number of links                                                                       |
++-------------------+---------------------------------------------------------------------------------------+
+| :math:`N_i`       | Number of intersecting links                                                          |
++-------------------+---------------------------------------------------------------------------------------+
+| :math:`P_2`       | Probability that two links intersect each other                                       |
++-------------------+---------------------------------------------------------------------------------------+
+
+General
+------- 
+    
+Traffic data from network model
+-------------------------------
+
+.. note::
+
+    Not implemented at this moment 
+
+TBD
+
+Traffic data derived from AIS trajectories
+------------------------------------------
+
+.. note::
+
+    Not implemented at this moment 
+
+Unbounded traffic consists of two sources:
+
+1.  Ships which cannot be assigned to a link, because the set criteria are not fulfilled (unassigned bounded traffic).
+
+2.  Ships types and sizes which are by default tagged as unbounded. 
+
+Unbounded traffic is assigned to a raster cell. Ten randomly generated trajectories representing AIS samples are shown in :numref:`fig:raster`. Additional samples are inserted on the raster edges. Then, unique vectors are created that belong to one ship. These vectors respect the boundaries of the raster cells. The red dots in the figure correspond to a pair of intersecting links in a raster cell.
+
+.. _fig:raster:
+.. figure::
+    ./images/raster_assignment.svg
+    :alt: raster_assignment
+    :align: center
+     
+    Raster assignment (course) 
+
+In :numref:`fig:raster_fine` a finer grid (7x7 instead of 3x3) with identical trajectories are displayed in :numref:`fig:raster`. It can be observed that the raster cell size has no impact on the number of link intersections.    
+    
+.. _fig:raster_fine:
+.. figure::
+    ./images/raster_assignment_fine.svg
+    :alt: raster_assignment_fine
+    :align: center
+     
+    Raster assignment (fine)     
+
+Consider an area where links are generated though a given method :math:`\mathcal{G}`. The chances that two links intersect are given by :math:`P_2(\mathcal{G})`. The total number of intersections :math:`N_I` can then be described by
+
+.. math::
+    :label: eq_NI1
+    
+    N_I = \sum_{i=0}^{m} \sum_{i=j+1}^m P_2,
+
+Where :math:`m(\mathcal{G})` is the total number of links in the scenario. To avoid double links, only unique pairs are evaluated. Since :math:`P_2` does not depend on either :math:`i` or :math:`j`, it can be moved forward and rewritten as
+
+.. math::
+    :label: eq_NI2
+
+    N_I = P_2 \sum_{i=0}^{m} \sum_{i=j+1}^m = P_2 \left[ (m - 1) + (m - 2) + ... + 0 \right],
+    
+Which can be simplified to:
+
+.. math::
+    :label: eq_NI3
+
+    N_I = P_2 m \frac{(m - 1)}{2}
+
+The number of links in a generation model with constant traffic flow is given by :math:`m(\mathcal{G}) \propto \Delta t`, leading to a relation between the number of intersecting links and the duration of the observation (:math:`{\Delta}t`)  of:
+
+.. math::
+    :label: eq_NI4
+    
+    N_I \propto \Delta t^2
+
+If the duration of the observation is doubled and :math:`P_2` remains constant, the number of observed intersecting links will increase with a factor of 4. The example of :numref:`fig:raster_fine` is regenerated with 20 instead of 10 randomly generated trajectories. The number of observed intersections is equal to 63 (:numref:`fig:raster_time`). 
+
+.. _fig:raster_time:
+.. figure::
+    ./images/raster_assignment_time.svg
+    :alt: raster_assignment_time
+    :align: center
+     
+    Doubled observation time   
+
+

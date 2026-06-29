@@ -1,0 +1,6 @@
+uid,type,num_vertices,vertex_0,vertex_1,vertex_2,vertex_3,vertex_4,elevation,description
+OB0000, platform, 5, 3 ,2 ,4 ,5 ,3 ,-4, platform at -4m
+OB0001, platform, 5, 3 ,2 ,4 ,5 ,3 ,-2, platform at -2m
+OB0002, platform, 5, 3 ,2 ,4 ,5 ,3 , 0, platform at  0m
+OB0003, platform, 5, 3 ,2 ,4 ,5 ,3 , 2, platform at  2m
+OB0004, platform, 5, 3 ,2 ,4 ,5 ,3 , 4, platform at  4m

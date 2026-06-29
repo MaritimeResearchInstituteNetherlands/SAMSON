@@ -1,0 +1,7 @@
+uid, start, end, description
+L0, WP1, WP0, Crossing link
+L1, WP2, WP0, Crossing link
+L2, WP3, WP0, Crossing link
+L3, WP4, WP0, Crossing link
+L4, WP5, WP0, Crossing link
+L5, WP0, WP6, Non crossing link

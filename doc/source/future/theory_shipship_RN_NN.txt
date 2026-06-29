@@ -1,0 +1,161 @@
+.. _`theory_shipship_RN_NN`:
+
+
+Ship-Ship Exposures RN NN
+=========================
+
+Nomenclature
+------------
+
++----------------------------------+----------------------------------------------------------------------------+
+| Symbol                           | Meaning                                                                    |
++==================================+============================================================================+
+| :math:`{\Delta}t`                | Delta time corresponding with time unit in :math:`Q_i` and :math:`Q_j`     |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`\mu_i`                    | Mean value of ship :math:`i` lateral distribution                          |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`\mu_j`                    | Mean value of ship :math:`j` lateral distribution                          |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`\sigma_i`                 | Standard devation of ship :math:`i` lateral distribution                   |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`\sigma_j`                 | Standard devation of ship :math:`j` lateral distribution                   |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`\theta`                   | Angle between two adjacent links                                           |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`\theta_{ij}`              | Angle between ship :math:`i` and :math:`j`                                 |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`\theta_{lim}`             | Set threshold for the encounter angle, default :math:`10deg`               |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`b_i`                      | Ship :math:`i` width                                                       |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`b_j`                      | Ship :math:`j` width                                                       |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`l_i`                      | Ship :math:`i` length                                                      |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`l_j`                      | Ship :math:`j` length                                                      |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`m`                        | Number of passages in a raster cell per time unit                          |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`n`                        | Number of unique ship type and sizes                                       |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`u_i`                      | Harmonic speed of ship :math:`i`                                           |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`u_j`                      | Harmonic speed of ship :math:`j`                                           |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`u_{ij}`                   | Relative speed between ship :math:`i` and :math:`j`                        |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`D_i`                      | Apparent collision diameter of ship :math:`i`                              |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`D_j`                      | Apparent collision diameter of ship :math:`j`                              |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`D_{ij}`                   | Apparent collision diameter of ship :math:`i` and :math:`j`                |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`L`                        | Link length                                                                |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`N_{c}`                    | Number of predicted collisions                                             |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`N_{cross}`                | Number of crossing encounter events                                        |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`N_{e}`                    | Number of encounter events                                                 |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`N_{head}`                 | Number of head-on encounter events                                         |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`N_{over}`                 | Number of overtaking encounter events                                      |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`N_{rn}`                   | Number of route bound and non-route bound encounter events                 |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`N_{nn}`                   | Number of non-route bound encounter events                                 |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`P_{c}`                    | Causation factor                                                           |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`P_{ij}`                   | The probability that ship :math:`i` overlaps ship :math:`j`                |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`Q_{i}`                    | Number of passages per time unit for each ship type and size (:math:`i` )  |
++----------------------------------+----------------------------------------------------------------------------+
+| :math:`Q_{j}`                    | Number of passages per time unit for each ship type and size (:math:`j` )  |
++----------------------------------+----------------------------------------------------------------------------+
+
+Route bound and non-route bound
+-------------------------------
+
+This **crossing** ships model is applied for the following conditions:
+
+*  All assigned ships of a raster cell are denoted as unbounded and have their own link with begin and endpoint within the boundaries of this cell.
+ 
+*  If the route bound link and the non-route bound link of the ship intersect, the number of encounters are computed with the route-bound crossing ships model.
+
+*  The encounter angle must fulfil the following condition for the intersecting links: :math:`{\theta}_{lim}<{\theta}_{ij}<{\pi}-{\theta}_{lim}`.
+
+*  The model is applied for each link and raster cell intersection in an area.
+
+The number of encounters in the set time unit for a single traffic link in a single raster cell is computed as follows:
+
+.. math::
+    :label: eq_rn_num
+
+    N_{rn}=\sum_{i=1}^{n}\sum_{j=1}^{m}P_{ij}\frac{Q_i}{u_iu_j{\Delta}t}u_{ij}
+
+The :math:`{\Delta}t` in :math:numref:`eq_rn_num` corresponds with the :math:`{\Delta}t` (duration of the observation) in the :ref:`theory_traffic` section.
+
+The image below shows how the edges of the raster cell intersect with the traffic link. The color map is shown for illustrative purposes only and represents 
+the relationship between the shortened link length and the maximum possible length given the link direction. The number of passages (:math:`Q_i`) are 
+identical for the shortened and original link. 
+
+.. figure::
+    ./images/shipship_bounded_unbounded.svg
+    :alt: ship_ship_bounded_unbounded
+    :align: center
+     
+    Link intersecting raster cells
+
+Index :math:`i` represents the ship types and sizes in de ship database. Counter :math:`j` represents all passed ships in the raster cell during the 
+applicable time unit, which is set in :math:`Q_i` and :math:`{\Delta}t`.
+
+Now the computation of :math:`P_{ij}` also depends on the encounter angle :math:`{\theta}_{ij}` and the crossing condition:
+    
+.. math::    
+    :label: eq_rn_prop_cond
+       
+    P_{ij}   = \begin{cases}
+                 \begin{split}
+                                                 0 &\text{, for non intersecting links} \\
+                   \frac{D_{ij}}{sin{\theta}_{ij}} &\text{, for intersecting links} 
+                 \end{split}
+               \end{cases}   
+
+The encounter angle :math:`{\theta}_{ij}` is unique for each pair of intersecting links and so is the apparent collision diameter (:math:`D_{ij}`) and 
+relative velocity (:math:`u_{ij}`). The computed encounters (:math:`N_{rn}`) must be assigned to the link and the raster cell with the ratios 
+:math:`D_{i}/D_{ij}` and :math:`D_{j}/D_{ij}`. 
+
+Non-route bound 
+---------------
+
+The **crossing** ships model is applied for the following conditions:
+
+*  All assigned ships of a raster cell are denoted as unbounded and have their own link with begin and endpoint within the boundaries of this cell.
+ 
+*  The number of encounters are computed with the route-bound crossing ships model for each unique pair of crossing links derived from the unbounded traffic .
+
+*  The encounter angle must fulfil the following condition for the intersecting links: :math:`{\theta}_{lim}<{\theta}_{ij}<{\pi}-{\theta}_{lim}`.
+
+*  The model is applied for each raster cell in an area.
+
+The number of encounters in the set time unit for a single traffic link in a single raster cell is computed as follows:
+
+.. math::
+    :label: eq_nn_num
+    
+    N_{nn}=\sum_{i=1}^{m}\sum_{j=i+1}^{m}P_{ij}\frac{1}{u_iu_j{\Delta}t^2}u_{ij}
+
+The calculation of :math:`N_{nn}` is performed for each raster cell in an area. The same conditions for :math:`P_{ij}` apply as for the :math:`N_{rn}` 
+computation in the previous section.
+
+.. math:: 
+    :label: eq_nn_prop_cond
+    
+    P_{ij}   = \begin{cases}
+                 \begin{split}
+                                                 0 &\text{, for non intersecting links} \\
+                   \frac{D_{ij}}{sin{\theta}_{ij}} &\text{, for intersecting links} 
+                 \end{split}
+               \end{cases} 

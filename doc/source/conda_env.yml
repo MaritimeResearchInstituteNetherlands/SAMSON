@@ -1,0 +1,13 @@
+channels:
+  - https://proget.marin.local/conda/conda_marin_buildfarm
+  - https://proget.marin.local/conda/conda_marin_main
+  - https://proget.marin.local/conda/conda_marin_forge
+  - nodefaults
+dependencies:
+  - anaconda-marin-subsetter=2025.4
+  - python
+  - sphinx
+  - pydata-sphinx-theme
+  - sphinx-copybutton
+  - sphinx-design
+  - sphinxcontrib-bibtex

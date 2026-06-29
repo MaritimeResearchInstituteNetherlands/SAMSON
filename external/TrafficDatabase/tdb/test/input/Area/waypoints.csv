@@ -1,0 +1,12 @@
+// Copyright (c) 2026, MARIN, Maritime Research Institute Netherlands.
+//
+// Licensed under the European Union Public Licence (EUPL), Version 1.2.
+// You may not use this work except in compliance with the Licence.
+// You may obtain a copy of the Licence at:
+//
+// https://eupl.eu/1.2/en/
+uid, vertex_uid, range_of_influence, description
+WP0, 16, 1.0, left starting point
+WP1, 15, 1.0, right starting point
+WP2, 14, 1.0, crossing point
+WP3, 13, 1.0, end point

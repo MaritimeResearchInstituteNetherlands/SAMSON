@@ -1,0 +1,4 @@
+# Samson input/output library
+add_subdirectory(sio.logger)
+add_subdirectory(sio.csv)
+add_subdirectory(sio.shapelib)

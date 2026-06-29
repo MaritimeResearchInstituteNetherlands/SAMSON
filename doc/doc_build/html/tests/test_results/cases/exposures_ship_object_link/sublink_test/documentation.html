@@ -1,0 +1,1449 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Sublink test &#8212; samson</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../../_static/documentation_options.js?v=ecb8216d"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tests/test_results/cases/exposures_ship_object_link/sublink_test/documentation';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://srcdoc.marin.nl/SAMSON/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'develop';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="Tide Test" href="../tidal_test/documentation.html" />
+    <link rel="prev" title="Sliding objects" href="../sliding_link/documentation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="develop" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/logo.png" class="logo__image only-light" alt="samson - Home"/>
+    <img src="../../../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="samson - Home"/>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../../../../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../glossary.html">
+    Glossary
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../references.html">
+    References
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../../tests.html">
+    Tests
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../../../../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../tests.html">
+    Tests
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_guide/user_guide_installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_guide/user_guide_getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorials/qgis/tutorials_qgis.html">Set-up QGIS for SAMSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorials/qgis_anchor/tutorials_qgis_anchor.html">Anchor area geometry</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../theory.html">Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../theory/theory_conventions.html">Conventions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../../theory/theory_building_blocks.html">Building Blocks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../theory/theory_area.html">Area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../theory/theory_ships.html">Ships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../theory/theory_traffic.html">Traffic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../../theory/theory_exposure_types.html">Exposure Types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../theory/theory_exposure_shipship.html">Ship-Ship Exposures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../theory/theory_exposure_shipobject.html">Ship-Object Exposures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../theory/theory_causation_factors.html">Causation Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../theory/theory_measures.html">Measures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../../../tests.html">Tests</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../exposures_ship_ship.html">Ship-Ship Exposures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../exposures_ship_ship_link_link/index.html">Link-Link</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_link/crossing_model/documentation.html">Crossing Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_link/crossing_model_multiple_links/documentation.html">Crossing Model with Multiple Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_link/head-on_model/documentation.html">Head-on Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_link/head-on_model_distribution/documentation.html">Head-on Model Distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_link/link_discretization_0/documentation.html">Discretization of Multiple Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_link/link_discretization_1/documentation.html">Discretization of a Single Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_link/overtaking_model/documentation.html">Overtaking Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_link/overtaking_model_distribution/documentation.html">Overtaking Model Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../exposures_ship_ship_cell/index.html">Cell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_cell/specified_heading/documentation.html">Specified Heading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_cell/uniform_heading/documentation.html">Uniform Heading Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../exposures_ship_ship_link_cell/index.html">Link-Cell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_cell/rotating_link_within_cell/documentation.html">Rotating Link in Cell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_cell/sliding_distribution_link/documentation.html">Sliding Distribution of Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_cell/sliding_link_over_two_cells/documentation.html">Sliding Link over Two Cells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_ship_link_cell/sliding_link_through_cell/documentation.html">Sliding Link through Cell</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../events_ship_ship.html">Ship-Ship Events</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../events_ship_ship/index.html">Causation Factors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../events_ship_ship/causation_factors/documentation.html">Striking and Struck Probability</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../collisions_ship_ship.html">Ship-Ship Collisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../../../exposures_ship_object.html">Ship-Object Exposures</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../index.html">Link-Object</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../gradient_assessment/documentation.html">Drift and Ram Exposure Gradients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../large_object/documentation.html">Large Object Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../link_discretization/documentation.html">Link Discretization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object_discretization/documentation.html">Ram Object Discretization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object_elevation/documentation.html">Object Elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ram_delta_y/documentation.html">Ram Verification for Gridlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rotating_objects/documentation.html">Rotating Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sliding_link/documentation.html">Sliding objects</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Sublink test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tidal_test/documentation.html">Tide Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../wind_vs_current/documentation.html">Wind versus Current</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../exposures_ship_object_cell/index.html">Cell-Object</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_object_cell/direction_probabilities/documentation.html">Verifying ram and drift direction probabilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../exposures_ship_object_cell/sliding_cell_through_object/documentation.html">Sliding Cell through Object</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../events_ship_object.html">Ship-Object Events</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../events_ship_object/index.html">Causation Factors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../events_ship_object/causation_factors/documentation.html">Drift and Ram Causation Factors</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../collisions_ship_object.html">Ship-Object Collisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../collisions_ship_object/index.html">Measures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../collisions_ship_object/drift_quantification/documentation.html">Drift Collision Quantification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collisions_ship_object/measure_anchor_function/documentation.html">Drift Anchor Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collisions_ship_object/measure_engine_repair_function/documentation.html">Drift Engine Repair Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collisions_ship_object/minimum_passing_distance/documentation.html">Minimum passing distance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_guide/user_guide_history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_guide/user_guide_cheatsheet.html">Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../user_guide/user_guide_troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../../user_guide.html" class="nav-link">User Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../../../../tests.html" class="nav-link">Tests</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../../../exposures_ship_object.html" class="nav-link">Ship-Object Exposures</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Link-Object</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Sublink test</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="sublink-test">
+<h1>Sublink test<a class="headerlink" href="#sublink-test" title="Link to this heading">#</a></h1>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Link to this heading">#</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Objective<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Verify that larger sigma’s work as expected</p>
+</dd>
+<dt class="field-even">Criteria<span class="colon">:</span></dt>
+<dd class="field-even"><p>The exposure should be the same when a wide sublink is spread over multiple small sublinks</p>
+</dd>
+</dl>
+<figure class="align-center" id="id1">
+<img alt="figure" src="../../../../../_images/area_overview7.svg" /><figcaption>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Test set-up</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="input">
+<h2>Input<a class="headerlink" href="#input" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-number">Table 114 </span><span class="caption-text">weatherstations.csv</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>uid</p></th>
+<th class="head"><p>vertex_uid</p></th>
+<th class="head"><p>description</p></th>
+<th class="head"><p>windstrength_table_uid</p></th>
+<th class="head"><p>current_table_uid</p></th>
+<th class="head"><p>tide_table_uid</p></th>
+<th class="head"><p>tide_angle</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WS01</p></td>
+<td><p>23</p></td>
+<td><p>standaardlocatie</p></td>
+<td><p>WST00</p></td>
+<td><p>CT0</p></td>
+<td><p>TT0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-number">Table 115 </span><span class="caption-text">windstrength.csv</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>uid</p></th>
+<th class="head"><p>table_uid</p></th>
+<th class="head"><p>scale</p></th>
+<th class="head"><p>probability</p></th>
+<th class="head"><p>wave_height</p></th>
+<th class="head"><p>winddirection_table_uid</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>WST00</p></td>
+<td><p>0</p></td>
+<td><p>0.028</p></td>
+<td><p>0.0</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>WST00</p></td>
+<td><p>1</p></td>
+<td><p>0.044</p></td>
+<td><p>0.1</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>WST00</p></td>
+<td><p>2</p></td>
+<td><p>0.108</p></td>
+<td><p>0.3</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>WST00</p></td>
+<td><p>3</p></td>
+<td><p>0.223</p></td>
+<td><p>0.5</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>WST00</p></td>
+<td><p>4</p></td>
+<td><p>0.3377</p></td>
+<td><p>1.0</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>WST00</p></td>
+<td><p>5</p></td>
+<td><p>0.123</p></td>
+<td><p>1.5</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>WST00</p></td>
+<td><p>6</p></td>
+<td><p>0.076</p></td>
+<td><p>2.0</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>WST00</p></td>
+<td><p>7</p></td>
+<td><p>0.035</p></td>
+<td><p>2.5</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>WST00</p></td>
+<td><p>8</p></td>
+<td><p>0.02</p></td>
+<td><p>3.0</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>WST00</p></td>
+<td><p>9</p></td>
+<td><p>0.004</p></td>
+<td><p>3.5</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>WST00</p></td>
+<td><p>10</p></td>
+<td><p>0.001</p></td>
+<td><p>4.0</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>WST00</p></td>
+<td><p>11</p></td>
+<td><p>0.0003</p></td>
+<td><p>4.5</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>WST00</p></td>
+<td><p>12</p></td>
+<td><p>0.0</p></td>
+<td><p>4.5</p></td>
+<td><p>WST00WDT00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id4">
+<caption><span class="caption-number">Table 116 </span><span class="caption-text">winddirection.csv</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>uid</p></th>
+<th class="head"><p>table_uid</p></th>
+<th class="head"><p>angle</p></th>
+<th class="head"><p>probabilty</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>0.0</p></td>
+<td><p>0.02117</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>0.1745329251994329</p></td>
+<td><p>0.02117</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>0.3490658503988659</p></td>
+<td><p>0.0256</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>0.5235987755982988</p></td>
+<td><p>0.0256</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>0.6981317007977318</p></td>
+<td><p>0.0256</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>0.8726646259971648</p></td>
+<td><p>0.02191</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>1.0471975511965976</p></td>
+<td><p>0.02191</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>1.2217304763960306</p></td>
+<td><p>0.02191</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>1.3962634015954636</p></td>
+<td><p>0.02818</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>1.5707963267948966</p></td>
+<td><p>0.02818</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>1.7453292519943295</p></td>
+<td><p>0.02818</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>1.9198621771937625</p></td>
+<td><p>0.01972</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>2.0943951023931957</p></td>
+<td><p>0.01972</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>2.2689280275926285</p></td>
+<td><p>0.01972</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>2.443460952792061</p></td>
+<td><p>0.01689</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>2.6179938779914944</p></td>
+<td><p>0.01689</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>2.792526803190927</p></td>
+<td><p>0.01689</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>2.9670597283903604</p></td>
+<td><p>0.02566</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>3.141592653589793</p></td>
+<td><p>0.02566</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>3.3161255787892263</p></td>
+<td><p>0.02566</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>3.490658503988659</p></td>
+<td><p>0.03638</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>3.665191429188092</p></td>
+<td><p>0.03638</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>3.839724354387525</p></td>
+<td><p>0.03638</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>4.014257279586958</p></td>
+<td><p>0.03884</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>4.188790204786391</p></td>
+<td><p>0.03884</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>4.363323129985824</p></td>
+<td><p>0.03884</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>4.537856055185257</p></td>
+<td><p>0.03586</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>4.71238898038469</p></td>
+<td><p>0.03586</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>4.886921905584122</p></td>
+<td><p>0.03586</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>5.061454830783556</p></td>
+<td><p>0.02808</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>5.235987755982989</p></td>
+<td><p>0.02808</p></td>
+</tr>
+<tr class="row-odd"><td><p>31</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>5.410520681182422</p></td>
+<td><p>0.02808</p></td>
+</tr>
+<tr class="row-even"><td><p>32</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>5.585053606381854</p></td>
+<td><p>0.02573</p></td>
+</tr>
+<tr class="row-odd"><td><p>33</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>5.759586531581287</p></td>
+<td><p>0.02573</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>5.934119456780721</p></td>
+<td><p>0.02573</p></td>
+</tr>
+<tr class="row-odd"><td><p>35</p></td>
+<td><p>WST00WDT00</p></td>
+<td><p>6.1086523819801535</p></td>
+<td><p>0.02117</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id5">
+<caption><span class="caption-number">Table 117 </span><span class="caption-text">shipcategories.csv</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>uid</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>length</p></th>
+<th class="head"><p>width</p></th>
+<th class="head"><p>height</p></th>
+<th class="head"><p>draft</p></th>
+<th class="head"><p>default_speed</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sc0190</p></td>
+<td><p>10</p></td>
+<td><p>170.06</p></td>
+<td><p>27.01</p></td>
+<td><p>18.346755262848408</p></td>
+<td><p>10.82</p></td>
+<td><p>6.88738216272</p></td>
+<td><p>CHEM  DH</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id6">
+<caption><span class="caption-number">Table 118 </span><span class="caption-text">shiplinkdata.csv</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>uid</p></th>
+<th class="head"><p>frequency</p></th>
+<th class="head"><p>speed</p></th>
+<th class="head"><p>mu</p></th>
+<th class="head"><p>sigma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sld01</p></td>
+<td><p>1000.0</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>1000</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld02</p></td>
+<td><p>0.8999516794392145</p></td>
+<td></td>
+<td><p>-3000</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld03</p></td>
+<td><p>1.6042650867622374</p></td>
+<td></td>
+<td><p>-2800</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld04</p></td>
+<td><p>2.748009488357246</p></td>
+<td></td>
+<td><p>-2600</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld05</p></td>
+<td><p>4.523198017771715</p></td>
+<td></td>
+<td><p>-2400</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld06</p></td>
+<td><p>7.154155308469409</p></td>
+<td></td>
+<td><p>-2200</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld07</p></td>
+<td><p>10.873181103131852</p></td>
+<td></td>
+<td><p>-2000</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld08</p></td>
+<td><p>15.879633310974095</p></td>
+<td></td>
+<td><p>-1800</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld09</p></td>
+<td><p>22.284864322965102</p></td>
+<td></td>
+<td><p>-1600</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld10</p></td>
+<td><p>30.051439054734683</p></td>
+<td></td>
+<td><p>-1400</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld11</p></td>
+<td><p>38.940935108646016</p></td>
+<td></td>
+<td><p>-1200</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld12</p></td>
+<td><p>48.48789849314515</p></td>
+<td></td>
+<td><p>-1000</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld13</p></td>
+<td><p>58.01579942419412</p></td>
+<td></td>
+<td><p>-800</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld14</p></td>
+<td><p>66.70297052012681</p></td>
+<td></td>
+<td><p>-600</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld15</p></td>
+<td><p>73.69365151305615</p></td>
+<td></td>
+<td><p>-400</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld16</p></td>
+<td><p>78.2349857591369</p></td>
+<td></td>
+<td><p>-200</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld17</p></td>
+<td><p>79.8101236181786</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld18</p></td>
+<td><p>78.23498575913685</p></td>
+<td></td>
+<td><p>200</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld19</p></td>
+<td><p>73.69365151305621</p></td>
+<td></td>
+<td><p>400</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld20</p></td>
+<td><p>66.70297052012681</p></td>
+<td></td>
+<td><p>600</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld21</p></td>
+<td><p>58.01579942419407</p></td>
+<td></td>
+<td><p>800</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld22</p></td>
+<td><p>48.48789849314521</p></td>
+<td></td>
+<td><p>1000</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld23</p></td>
+<td><p>38.94093510864607</p></td>
+<td></td>
+<td><p>1200</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld24</p></td>
+<td><p>30.05143905473461</p></td>
+<td></td>
+<td><p>1400</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld25</p></td>
+<td><p>22.284864322965152</p></td>
+<td></td>
+<td><p>1600</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld26</p></td>
+<td><p>15.879633310974011</p></td>
+<td></td>
+<td><p>1800</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld27</p></td>
+<td><p>10.87318110313188</p></td>
+<td></td>
+<td><p>2000</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld28</p></td>
+<td><p>7.154155308469402</p></td>
+<td></td>
+<td><p>2200</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld29</p></td>
+<td><p>4.5231980177717155</p></td>
+<td></td>
+<td><p>2400</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld30</p></td>
+<td><p>2.748009488357319</p></td>
+<td></td>
+<td><p>2600</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sld31</p></td>
+<td><p>1.6042650867621837</p></td>
+<td></td>
+<td><p>2800</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sld32</p></td>
+<td><p>0.8999516794392628</p></td>
+<td></td>
+<td><p>3000</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id7">
+<caption><span class="caption-number">Table 119 </span><span class="caption-text">shiplinks.csv</span><a class="headerlink" href="#id7" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>uid</p></th>
+<th class="head"><p>ship_uid</p></th>
+<th class="head"><p>link_uid</p></th>
+<th class="head"><p>shiplinkdata_uid</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sl01</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld01</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl02</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld02</p></td>
+</tr>
+<tr class="row-even"><td><p>sl03</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld03</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl04</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld04</p></td>
+</tr>
+<tr class="row-even"><td><p>sl05</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld05</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl06</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld06</p></td>
+</tr>
+<tr class="row-even"><td><p>sl07</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld07</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl08</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld08</p></td>
+</tr>
+<tr class="row-even"><td><p>sl09</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld09</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl10</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld10</p></td>
+</tr>
+<tr class="row-even"><td><p>sl11</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld11</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl12</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld12</p></td>
+</tr>
+<tr class="row-even"><td><p>sl13</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld13</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl14</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld14</p></td>
+</tr>
+<tr class="row-even"><td><p>sl15</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld15</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl16</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld16</p></td>
+</tr>
+<tr class="row-even"><td><p>sl17</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld17</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl18</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld18</p></td>
+</tr>
+<tr class="row-even"><td><p>sl19</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld19</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl20</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld20</p></td>
+</tr>
+<tr class="row-even"><td><p>sl21</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld21</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl22</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld22</p></td>
+</tr>
+<tr class="row-even"><td><p>sl23</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld23</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl24</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld24</p></td>
+</tr>
+<tr class="row-even"><td><p>sl25</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld25</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl26</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld26</p></td>
+</tr>
+<tr class="row-even"><td><p>sl27</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld27</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl28</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld28</p></td>
+</tr>
+<tr class="row-even"><td><p>sl29</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld29</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl30</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld30</p></td>
+</tr>
+<tr class="row-even"><td><p>sl31</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld31</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl32</p></td>
+<td><p>sc0190</p></td>
+<td><p>L1</p></td>
+<td><p>sld32</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id8">
+<caption><span class="caption-number">Table 120 </span><span class="caption-text">objects.csv</span><a class="headerlink" href="#id8" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>uid</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>num_vertex_uids</p></th>
+<th class="head"><p>vertex_uids</p></th>
+<th class="head"><p>…</p></th>
+<th class="head"><p>elevation</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>p1</p></td>
+<td><p>basic_object</p></td>
+<td><p>2</p></td>
+<td><p>12</p></td>
+<td><p>14</p></td>
+<td><p>0</p></td>
+<td><p>test</p></td>
+</tr>
+<tr class="row-odd"><td><p>p2</p></td>
+<td><p>basic_object</p></td>
+<td><p>2</p></td>
+<td><p>11</p></td>
+<td><p>13</p></td>
+<td><p>0</p></td>
+<td><p>test</p></td>
+</tr>
+<tr class="row-even"><td><p>p3</p></td>
+<td><p>basic_object</p></td>
+<td><p>2</p></td>
+<td><p>16</p></td>
+<td><p>18</p></td>
+<td><p>0</p></td>
+<td><p>test</p></td>
+</tr>
+<tr class="row-odd"><td><p>p4</p></td>
+<td><p>basic_object</p></td>
+<td><p>2</p></td>
+<td><p>15</p></td>
+<td><p>17</p></td>
+<td><p>0</p></td>
+<td><p>test</p></td>
+</tr>
+<tr class="row-even"><td><p>p5</p></td>
+<td><p>basic_object</p></td>
+<td><p>2</p></td>
+<td><p>20</p></td>
+<td><p>22</p></td>
+<td><p>0</p></td>
+<td><p>test</p></td>
+</tr>
+<tr class="row-odd"><td><p>p6</p></td>
+<td><p>basic_object</p></td>
+<td><p>2</p></td>
+<td><p>19</p></td>
+<td><p>21</p></td>
+<td><p>0</p></td>
+<td><p>test</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="result">
+<h2>Result<a class="headerlink" href="#result" title="Link to this heading">#</a></h2>
+<figure class="align-center" id="id9">
+<span id="fig-comparison-exposures-link-object-rotation"></span><img alt="Comparison:Exposures:Link:Object:Rotation" src="tests/test_results/cases/exposures_ship_object_link/sublink_test/figure1.svg" /><figcaption>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Drift/ram exposure versus the orientation of the object</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ok</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result">Result</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

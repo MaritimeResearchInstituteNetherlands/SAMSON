@@ -1,0 +1,7 @@
+uid,type,length,width,height,draft,default_speed,description
+scat0,0,100,30,10,3,11, description
+scat1,0,101,31,10,3,12, description
+scat2,0,102,32,10,3,13, description
+scat3,1,103,33,10,3,14, description
+scat4,1,104,34,10,3,15, description
+scat5,1,105,35,10,3,16, description

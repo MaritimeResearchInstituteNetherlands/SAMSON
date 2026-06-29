@@ -1,0 +1,5 @@
+uid,num_vertex_uids,vertex_uids,...,grid_uid,description
+C0, 5, 4, 5, 8, 7, 4, G0, bottom left
+C1, 5, 5, 6, 9, 8, 5, G0, bottom right
+C2, 5, 7, 8, 11, 10, 7, G0, top left
+C3, 5, 8, 9, 12, 11, 8, G0, top right

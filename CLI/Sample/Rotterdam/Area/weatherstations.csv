@@ -1,0 +1,4 @@
+uid,vertex_uid,description,windstrength_table_uid,current_table_uid,tide_table_uid,tide_angle
+WS0, 19, "Den helder", WST0, CT0, TT0, 0.4 
+WS1, 20, "Rotterdam", WST1, CT0, TT1, 0.5 
+WS2, 21, "Groningen", WST1, CT1, TT1, 0.6 

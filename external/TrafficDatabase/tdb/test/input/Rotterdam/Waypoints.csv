@@ -1,0 +1,12 @@
+// Copyright (c) 2026, MARIN, Maritime Research Institute Netherlands.
+//
+// Licensed under the European Union Public Licence (EUPL), Version 1.2.
+// You may not use this work except in compliance with the Licence.
+// You may obtain a copy of the Licence at:
+//
+// https://eupl.eu/1.2/en/
+uid,lon,lat,name
+W001,4.08970811430554,51.98286373809419,Start
+W002,4.12058380917342,51.9753406501274,Intersection
+W003,4.127926093805888,51.97399305238968,NorthEnd
+W004,4.122037025784467,51.96950863423263,SouthEnd

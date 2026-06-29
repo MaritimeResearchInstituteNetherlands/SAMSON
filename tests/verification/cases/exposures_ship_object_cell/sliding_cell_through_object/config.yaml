@@ -1,0 +1,22 @@
+---
+apiVersion : "0.0.2"
+inputLocation: "\\\\"
+outputLocation: "\\Results\\"
+areaModel:
+  vertices: "Area\\vertices.csv"
+  cells: "Area\\cells.csv"
+  objects: "Area\\objects.csv"
+  weatherstations: "Area\\weatherstations.csv"
+  windstrength: "Area\\windstrength.csv"
+  winddirection: "Area\\winddirection.csv"
+  current: "Area\\current.csv"
+  tide: "Area\\tide.csv"
+trafficModel:
+  shipCategories: "Traffic\\shipcategories.csv"
+  shipsOnCells: "Traffic\\shipcells.csv"
+interactionModel:
+  model: "sem"
+  shipCellData: "ModelData\\shipcelldata.csv"
+logger:
+  fileName: "samson.log"
+  logLevel: "verbose"

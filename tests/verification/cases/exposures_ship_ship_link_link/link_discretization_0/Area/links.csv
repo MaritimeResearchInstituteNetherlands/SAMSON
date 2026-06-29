@@ -1,0 +1,9 @@
+uid, start, end, description
+L0, WP1, WP0, First set-up
+L1, WP3, WP2, First set-up
+L2, WP2, WP0, First set-up
+L3, WP2, WP3, First set-up
+L4, WP0, WP2, First set-up
+L5, WP5, WP4, Second set-up
+L6, WP6, WP4, Second set-up
+L7, WP4, WP6, Second set-up

@@ -1,0 +1,20 @@
+uid, type, num_vertices, vertex_0, vertex_1, elevation, description
+OB00, Check_Line, 2,  2, 3, 0.0, Linestring00
+OB01, Check_Line, 2,  4, 5, 0.0, Linestring01
+OB02, Check_Line, 2,  6, 7, 0.0, Linestring02
+OB03, Check_Line, 2,  8, 9, 0.0, Linestring03
+OB04, Check_Line, 2, 10,11, 0.0, Linestring04
+OB05, Check_Line, 2, 12,13, 0.0, Linestring05
+OB06, Check_Line, 2, 14,15, 0.0, Linestring06
+OB07, Check_Line, 2, 16,17, 0.0, Linestring07 
+OB08, Check_Line, 2, 18,19, 0.0, Linestring08 
+OB09, Check_Line, 2, 20,21, 0.0, Linestring09 
+OB10, Check_Line, 2, 22,23, 0.0, Linestring10 
+OB11, Check_Line, 2, 24,25, 0.0, Linestring11 
+OB12, Check_Line, 2, 26,27, 0.0, Linestring12 
+OB13, Check_Line, 2, 28,29, 0.0, Linestring13 
+OB14, Check_Line, 2, 30,31, 0.0, Linestring14 
+OB15, Check_Line, 2, 32,33, 0.0, Linestring15 
+OB16, Check_Line, 2, 34,35, 0.0, Linestring16
+OB17, Check_Line, 2, 36,37, 0.0, Linestring17
+OB18, Check_Line, 2, 38,39, 0.0, Linestring18

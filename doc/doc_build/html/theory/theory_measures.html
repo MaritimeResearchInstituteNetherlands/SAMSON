@@ -1,0 +1,1078 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Measures &#8212; samson</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=ecb8216d"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'theory/theory_measures';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://srcdoc.marin.nl/SAMSON/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'develop';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tests" href="../tests.html" />
+    <link rel="prev" title="Causation Factors" href="theory_causation_factors.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="develop" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="samson - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="samson - Home"/>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../references.html">
+    References
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../tests.html">
+    Tests
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../user_guide.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release_notes.html">
+    Release Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../abbreviations.html">
+    Abbreviations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../specifications.html">
+    Specifications
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tests.html">
+    Tests
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/qgis/tutorials_qgis.html">Set-up QGIS for SAMSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/qgis_anchor/tutorials_qgis_anchor.html">Anchor area geometry</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../theory.html">Theory</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="theory_conventions.html">Conventions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="theory_building_blocks.html">Building Blocks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory_area.html">Area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_ships.html">Ships</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_traffic.html">Traffic</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="theory_exposure_types.html">Exposure Types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory_exposure_shipship.html">Ship-Ship Exposures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory_exposure_shipobject.html">Ship-Object Exposures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="theory_causation_factors.html">Causation Factors</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Measures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tests.html">Tests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/exposures_ship_ship.html">Ship-Ship Exposures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/index.html">Link-Link</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/crossing_model/documentation.html">Crossing Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/crossing_model_multiple_links/documentation.html">Crossing Model with Multiple Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/head-on_model/documentation.html">Head-on Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/head-on_model_distribution/documentation.html">Head-on Model Distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/link_discretization_0/documentation.html">Discretization of Multiple Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/link_discretization_1/documentation.html">Discretization of a Single Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/overtaking_model/documentation.html">Overtaking Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_link/overtaking_model_distribution/documentation.html">Overtaking Model Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_cell/index.html">Cell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_cell/specified_heading/documentation.html">Specified Heading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_cell/uniform_heading/documentation.html">Uniform Heading Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/index.html">Link-Cell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/rotating_link_within_cell/documentation.html">Rotating Link in Cell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/sliding_distribution_link/documentation.html">Sliding Distribution of Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/sliding_link_over_two_cells/documentation.html">Sliding Link over Two Cells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_ship_link_cell/sliding_link_through_cell/documentation.html">Sliding Link through Cell</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/events_ship_ship.html">Ship-Ship Events</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/events_ship_ship/index.html">Causation Factors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/events_ship_ship/causation_factors/documentation.html">Striking and Struck Probability</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/collisions_ship_ship.html">Ship-Ship Collisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/exposures_ship_object.html">Ship-Object Exposures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/index.html">Link-Object</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/gradient_assessment/documentation.html">Drift and Ram Exposure Gradients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/large_object/documentation.html">Large Object Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/link_discretization/documentation.html">Link Discretization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/object_discretization/documentation.html">Ram Object Discretization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/object_elevation/documentation.html">Object Elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/ram_delta_y/documentation.html">Ram Verification for Gridlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/rotating_objects/documentation.html">Rotating Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/sliding_link/documentation.html">Sliding objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/sublink_test/documentation.html">Sublink test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/tidal_test/documentation.html">Tide Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_link/wind_vs_current/documentation.html">Wind versus Current</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_cell/index.html">Cell-Object</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_cell/direction_probabilities/documentation.html">Verifying ram and drift direction probabilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/exposures_ship_object_cell/sliding_cell_through_object/documentation.html">Sliding Cell through Object</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/events_ship_object.html">Ship-Object Events</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/events_ship_object/index.html">Causation Factors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/events_ship_object/causation_factors/documentation.html">Drift and Ram Causation Factors</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tests/collisions_ship_object.html">Ship-Object Collisions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/index.html">Measures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/drift_quantification/documentation.html">Drift Collision Quantification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/measure_anchor_function/documentation.html">Drift Anchor Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/measure_engine_repair_function/documentation.html">Drift Engine Repair Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tests/test_results/cases/collisions_ship_object/minimum_passing_distance/documentation.html">Minimum passing distance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_cheatsheet.html">Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide_troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../user_guide.html" class="nav-link">User Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../theory.html" class="nav-link">Theory</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Measures</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="admonition warning" id="theory-measures">
+<p class="admonition-title">Warning</p>
+<p>Under Development</p>
+</div>
+<section id="measures">
+<h1>Measures<a class="headerlink" href="#measures" title="Link to this heading">#</a></h1>
+<p>By combining the exposures and the associated causation factors, the number of ship-ship, drift and ram events can be calculated.
+Measures can be applied to reduce the number of predicted accidents. Again, we distinguish between ship-ship and ship-object measures.
+Ship-object measures can be split into drift and ram measures. Some measures are enabled by default, others can be enabled optionally,
+but come with extra cost.</p>
+<section id="nomenclature">
+<h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>Mean value</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mu_d\)</span></p></td>
+<td><p>Drift velocity heading (going-to)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mu_t\)</span></p></td>
+<td><p>Tide velocity heading (going-to)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\rho_{air}\)</span></p></td>
+<td><p>Air density</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho_{water}\)</span></p></td>
+<td><p>Sea water density</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>Standard deviation value</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\zeta\)</span></p></td>
+<td><p>Significant wave amplitude</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(f(x)\)</span></p></td>
+<td><p>Normal distribution</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(g\)</span></p></td>
+<td><p>Gravitational acceleration</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td><p>Wave number</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(s\)</span></p></td>
+<td><p>Drift distance</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(t\)</span></p></td>
+<td><p>Time</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_{d}\)</span></p></td>
+<td><p>Drift speed</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mathbf{v_d}\)</span></p></td>
+<td><p>Drift velocity vector</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_{h}\)</span></p></td>
+<td><p>High tide velocity</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v_{l}\)</span></p></td>
+<td><p>Low tide velocity</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_{t}\)</span></p></td>
+<td><p>Tidal speed</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mathbf{v_d}\)</span></p></td>
+<td><p>Tidal velocity vector</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_{w}\)</span></p></td>
+<td><p>Wind speed</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p>Ram distance</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(A_{L}\)</span></p></td>
+<td><p>Lateral area of the superstructure</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(B\)</span></p></td>
+<td><p>Breadth</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(C_{w}\)</span></p></td>
+<td><p>Wind drag coefficient</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(C_{d}\)</span></p></td>
+<td><p>Hull drag coefficient</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(F_{w}\)</span></p></td>
+<td><p>Wind force</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(F_{s}\)</span></p></td>
+<td><p>Wave drift force</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(F_{d}\)</span></p></td>
+<td><p>Hull drag force</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H\)</span></p></td>
+<td><p>Height</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td><p>Length</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(P_{en}\)</span></p></td>
+<td><p>Probability engine repair</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{an}\)</span></p></td>
+<td><p>Probability anchor failure</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(P_{av}\)</span></p></td>
+<td><p>Probability avoidance</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{er}\)</span></p></td>
+<td><p>Probability ERTV deployment</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(P_{md}\)</span></p></td>
+<td><p>Probability all drift measures</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{mr}\)</span></p></td>
+<td><p>Probability all ram measures</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(P_{ms}\)</span></p></td>
+<td><p>Probability all ship-ship measures</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{pi}\)</span></p></td>
+<td><p>Probability pilot measure</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>Drift coefficient</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>Draft</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T_{p}\)</span></p></td>
+<td><p>Wave peak period</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="ship-ship-measures">
+<h2>Ship-Ship Measures<a class="headerlink" href="#ship-ship-measures" title="Link to this heading">#</a></h2>
+<p>The pilot assistance is the only measure to reduce the number of predicted ship-ship collisions:</p>
+<ol class="arabic simple">
+<li><p>Pilot assistance (optionally)</p></li>
+</ol>
+<p>The ship-ship collision measure probability (<span class="math notranslate nohighlight">\(P_{ms}\)</span>) only depends on the pilot assistance function:</p>
+<div class="math notranslate nohighlight">
+\[P_{ms} = P_{pi}\]</div>
+<section id="pilot-assistance">
+<h3>Pilot assistance<a class="headerlink" href="#pilot-assistance" title="Link to this heading">#</a></h3>
+<p>The <a class="reference internal" href="../glossary.html#term-Pilot"><span class="xref std std-term">pilot</span></a> boards a ship and temporarily joins the crew to safely guide the passage of the ship. The pilot’s knowledge and expertise
+reduces the probability of an accident between two ships.</p>
+<div class="math notranslate nohighlight">
+\[
+P_{pi} = \begin{cases}
+           \begin{split}
+             1.0 &amp;\text{, disabled } \\
+             0.x &amp;\text{, enabled }
+           \end{split}
+         \end{cases}
+\]</div></section>
+</section>
+<section id="ship-object-measures">
+<h2>Ship-Object Measures<a class="headerlink" href="#ship-object-measures" title="Link to this heading">#</a></h2>
+<section id="drift">
+<h3>Drift<a class="headerlink" href="#drift" title="Link to this heading">#</a></h3>
+<p>Measures can be taken to prevent a collision between the ship and a static object during a drift event. These measures reduce the probability
+of a collision. Some of measures are enabled by default, while other measures can be added optionally. The engine repair function and the
+anchor capability are default enabled. The presence of an ERTV and pilot assistance are optional, but imply cost to reduce the drift event probability.</p>
+<p>The following four measures are or can be enabled to reduce the number of predicted ship object collisions due to drift events:</p>
+<ol class="arabic simple">
+<li><p>Engine repair measure (default enabled)</p></li>
+<li><p>Deploy an anchor (default enabled)</p></li>
+<li><p>Deploy an ERTV (optionally)</p></li>
+</ol>
+<p>The drift measure probability (<span class="math notranslate nohighlight">\(P_{md}\)</span>) can be computed by combining the probabilities of the above measures as follows:</p>
+<div class="math notranslate nohighlight">
+\[P_{md} = P_{en}P_{an}P_{er}\]</div>
+<section id="engine-repair-measure">
+<h4>Engine repair measure<a class="headerlink" href="#engine-repair-measure" title="Link to this heading">#</a></h4>
+<p>In 2002 and 2003 the Dutch Coastguard collected data about drifting ships in the Dutch part of the North Sea. This data is presented in
+<span id="id1">[<a class="reference internal" href="../references.html#id22" title="C. van der Tak. Analysis of the reported drifters in 2002-2003. collected by the netherlands coastguard from 2002-2003. Technical Report Memo, Dutch Coastguard, Den Helder, 4 2004.">vdT04</a>]</span>. The derived engine repair measure is only applicable for a drifting ship. In total 57 ships drifted on an annual basis
+according to this analysis.</p>
+<div class="math notranslate nohighlight">
+\[
+P_{en}(t) = \begin{cases}
+              \begin{split}
+                                           1 &amp;\text{, for } t&lt;900s \\
+                \frac{3600}{1.5(t-900)+3600} &amp;\text{, for } t\geq 900s
+              \end{split}
+            \end{cases}
+\]</div><p>With <span class="math notranslate nohighlight">\(t\)</span> in seconds.</p>
+<p>The engine repair measure requires the input variable <span class="math notranslate nohighlight">\(t\)</span> to estimate the probability of a collision. Here, <span class="math notranslate nohighlight">\(t\)</span> represents the
+time interval between exiting a link or cell and colliding with a static object, as described in the <span class="xref std std-ref">theory_area</span>. The distance between
+the two is determined through the exposure calculation. Using the drift velocity, the duration of the drift event (<span class="math notranslate nohighlight">\(t\)</span>) can be computed.
+This velocity depends on the ship’s characteristics and environmental factors such as wind, waves, and (tidal) currents. The methodology is
+further detailed in this section.</p>
+<section id="wave-and-wind">
+<h5>Wave and Wind<a class="headerlink" href="#wave-and-wind" title="Link to this heading">#</a></h5>
+<p>Drift velocity concept is derived from <span id="id2">[<a class="reference internal" href="../references.html#id18" title="G.F.M. Remery and G. van Oortmerssen. The mean wave, wind and current forces on offshore structures and their role in the design of mooring systems. In Offshore Technology Conference, OTC–1741. OTC, 1973.">RvO73</a>]</span>. During a drift event no propulsion forces act on the ship. The velocity is a result
+of the equilibrium of the environmental forces acting on a ship body. These forces orginate from wind loads on the superstructure, wave drift
+forces and tidal current loads on the hull. It is assumed that wind and wave drift forces are aligned. The tidal current velocity heading is
+independent of the wind- and wave heading. The drift velocity vector of a ship is perpendicular to the ship’s centreline.</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-sum-forces">
+<span class="eqno">(68)<a class="headerlink" href="#equation-eq-sso-sum-forces" title="Link to this equation">#</a></span>\[F_{w} + F_{s} - F_{d} = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-sso-wind-force">
+<span class="eqno">(69)<a class="headerlink" href="#equation-eq-sso-wind-force" title="Link to this equation">#</a></span>\[F_{w}=\frac{1}{2}\rho_{air}A_{l}C_{w}v_{w}^2\]</div>
+<p>With:</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-wind-lat">
+<span class="eqno">(70)<a class="headerlink" href="#equation-eq-sso-wind-lat" title="Link to this equation">#</a></span>\[A_{l}=\left(H-T\right)L\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-sso-drift-force">
+<span class="eqno">(71)<a class="headerlink" href="#equation-eq-sso-drift-force" title="Link to this equation">#</a></span>\[F_{s}=\frac{1}{16}\rho_{water}g{\zeta}^2LR^2\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-sso-current-force">
+<span class="eqno">(72)<a class="headerlink" href="#equation-eq-sso-current-force" title="Link to this equation">#</a></span>\[F_{d}=\frac{1}{2}\rho_{water}TLC_{d}v_{d}^2\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-sso-drift-vel">
+<span class="eqno">(73)<a class="headerlink" href="#equation-eq-sso-drift-vel" title="Link to this equation">#</a></span>\[v_{d}=\sqrt{\frac{\rho_{air}}{\rho_{water}}\frac{A_{l}}{TL}\frac{C_{w}}{C_{d}}v_{w}^2+\frac{1}{8}\frac{{\zeta}^2g}{T}\frac{R^2}{C_{d}}}\]</div>
+<p>The wave drift coefficent (<span class="math notranslate nohighlight">\(R\)</span>) is based on empirical coefficients <span id="id3">[<a class="reference internal" href="../references.html#id18" title="G.F.M. Remery and G. van Oortmerssen. The mean wave, wind and current forces on offshore structures and their role in the design of mooring systems. In Offshore Technology Conference, OTC–1741. OTC, 1973.">RvO73</a>]</span> and applied for all ship types and classes.</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-drift-r">
+<span class="eqno">(74)<a class="headerlink" href="#equation-eq-sso-drift-r" title="Link to this equation">#</a></span>\[\begin{split}R = \begin{cases}
+      \begin{split}
+        -1.4736(kT)^3+2.4765(kT)^2-0.0315(kT) &amp;\text{, for } kT\leq1 \\
+                                             1 &amp;\text{, for } kT&gt;1 \\
+      \end{split}
+    \end{cases}\end{split}\]</div>
+<p>For deep water the wave number (<span class="math notranslate nohighlight">\(k\)</span>) is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-wave-num">
+<span class="eqno">(75)<a class="headerlink" href="#equation-eq-sso-wave-num" title="Link to this equation">#</a></span>\[k=\frac{(2\pi)^2}{T_{p}^2g}\]</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id5">
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">Wave peak period and wind speed for each Beaufort class</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Beaufort Class</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(T_{p}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(v_{w}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>NA</p></td>
+<td><p>NA</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0.78</p></td>
+<td><p>1.003</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>1.87</p></td>
+<td><p>2.57</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>3.06</p></td>
+<td><p>4.37</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>4.62</p></td>
+<td><p>6.95</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>6.21</p></td>
+<td><p>9.77</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>7.70</p></td>
+<td><p>12.59</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>9.24</p></td>
+<td><p>15.68</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>10.81</p></td>
+<td><p>19.02</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>12.44</p></td>
+<td><p>22.62</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>14.09</p></td>
+<td><p>26.47</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>15.79</p></td>
+<td><p>30.58</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="tide">
+<h5>Tide<a class="headerlink" href="#tide" title="Link to this heading">#</a></h5>
+<p>The tide velocity cycle is simplified with a sine function. The low- and high tide values are set with the <span class="math notranslate nohighlight">\(v_{l}\)</span> and the <span class="math notranslate nohighlight">\(v_{h}\)</span> parameters.</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-tide-vel">
+<span class="eqno">(76)<a class="headerlink" href="#equation-eq-sso-tide-vel" title="Link to this equation">#</a></span>\[v_{t}=\frac{v_{l}+v_{h}}{2}+\frac{v_{h}-v_{l}}{2}sin\left(\frac{2{\pi}t}{t_n}\right), \text{ with } t_n=45000s\]</div>
+<p>Where <span class="math notranslate nohighlight">\(t\)</span> is time in seconds.</p>
+<p>Finally, the drift speed is a superposition of the computed velocity due to wind and waves (<span class="math notranslate nohighlight">\(v_{d}\)</span>) and projected tidal velocity
+(<span class="math notranslate nohighlight">\(v_{t}\)</span>). The tidal velocity vector is projected on the aligned wind- and wave vectors. The longitudinal component of this projection,
+which acts in the longitudinal direction of the ship, is ignored.</p>
+<p>The drift velocity vector is computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-wave-vec">
+<span class="eqno">(77)<a class="headerlink" href="#equation-eq-sso-wave-vec" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{v_d}= \begin{bmatrix}
+                v_d\,cos\left( {\mu}_d \right)\\
+                v_d\,sin\left( {\mu}_d \right)
+              \end{bmatrix}\end{split}\]</div>
+<p>The tidal velocity vector is computed as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-tide-vec">
+<span class="eqno">(78)<a class="headerlink" href="#equation-eq-sso-tide-vec" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{v_t}= \begin{bmatrix}
+                v_t\,cos\left( {\mu}_t \right)\\
+                v_t\,sin\left( {\mu}_t \right)
+              \end{bmatrix}\end{split}\]</div>
+<p>A scalar (<span class="math notranslate nohighlight">\(a\)</span>) is computed to scale the unit vector of the drift velocity:</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-tide-sca">
+<span class="eqno">(79)<a class="headerlink" href="#equation-eq-sso-tide-sca" title="Link to this equation">#</a></span>\[a=\frac{\mathbf{v}_t \cdot \mathbf{v}_d}{\left\| \mathbf{v}_d \right\|}\]</div>
+<p>The projected tidal velocity vector is computed with the scalar from <a class="reference internal" href="#equation-eq-sso-tide-sca">(79)</a> and the normalized drift velocity vector
+<a class="reference internal" href="#equation-eq-sso-wave-vec">(77)</a>.</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-tide-pro">
+<span class="eqno">(80)<a class="headerlink" href="#equation-eq-sso-tide-pro" title="Link to this equation">#</a></span>\[\textit{proj}_\mathbf{v_d}\mathbf{v_t}=a\hat{\mathbf{v}}{\mathbf{_d}}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-sso-tide-pro-vec">
+<span class="eqno">(81)<a class="headerlink" href="#equation-eq-sso-tide-pro-vec" title="Link to this equation">#</a></span>\[\textit{proj}_\mathbf{v_d}\mathbf{v_t}=v_t\left( v_d cos(\mu_d)cos(\mu_t) + v_d sin(\mu_d)sin(\mu_t) \right) \hat{\mathbf{v}}{\mathbf{_d}}\]</div>
+<p>The first term of <a class="reference internal" href="#equation-eq-sso-tide-pro-vec">(81)</a> can be substituted by <a class="reference internal" href="#equation-eq-sso-tide-vel">(76)</a>. The second term is a constant
+and is for simplicity replaced by variable <span class="math notranslate nohighlight">\(c\)</span> in the next equation.</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-tide-pro-fun">
+<span class="eqno">(82)<a class="headerlink" href="#equation-eq-sso-tide-pro-fun" title="Link to this equation">#</a></span>\[\textit{proj}_\mathbf{v_d}{v_t} = c\,v_t\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-sso-tide-int">
+<span class="eqno">(83)<a class="headerlink" href="#equation-eq-sso-tide-int" title="Link to this equation">#</a></span>\[s = \int_{t_0}^{t_1} \left( c\,v_t(t)+v_d \right) dt\]</div>
+<p>In total thirteen initial starting conditions of the drift event in a tidal cycle are considered:</p>
+<div class="math notranslate nohighlight" id="equation-eq-sso-tide-cycle">
+<span class="eqno">(84)<a class="headerlink" href="#equation-eq-sso-tide-cycle" title="Link to this equation">#</a></span>\[t_0 = \frac{n}{N}t_n, \text{ with } n \in \left\{0,1,2,..,12 \right\} \text{ and } N=13\]</div>
+<p>The elapsed time (<span class="math notranslate nohighlight">\(t_1-t_0\)</span>) is computed with the Newton-Raphson method for each starting condition of <span class="math notranslate nohighlight">\(t_0\)</span> by solving
+<span class="math notranslate nohighlight">\(t_1\)</span> numerically.</p>
+</section>
+</section>
+<section id="anchor-deployment">
+<h4>Anchor deployment<a class="headerlink" href="#anchor-deployment" title="Link to this heading">#</a></h4>
+<p>An anchor can be deployed to prevent the ship from drifting in the event of engine failure.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id6">
+<caption><span class="caption-number">Table 9 </span><span class="caption-text">Probability of an anchor failure for each Beaufort scale</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>Beaufort Class</p></td>
+<td><p><span class="math notranslate nohighlight">\(P_{an}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0.010</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0.010</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>0.010</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>0.010</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>0.035</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>0.070</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>0.126</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>0.210</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>0.350</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>0.490</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>0.630</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>0.700</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>1.000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="emergency-rescue-towing-vessel">
+<h4>Emergency Rescue Towing Vessel<a class="headerlink" href="#emergency-rescue-towing-vessel" title="Link to this heading">#</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Description will be updated in the near future by the newly developed model.</p>
+</div>
+<p>The coastguard can deploy an Emergency Rescue Towing Vessel (ERTV) to assist a drifting ship.</p>
+<div class="math notranslate nohighlight">
+\[
+P_{er} = \begin{cases}
+           \begin{split}
+             1.0 &amp;\text{, disabled } \\
+             0.x &amp;\text{, enabled }
+           \end{split}
+         \end{cases}
+\]</div></section>
+</section>
+<section id="ram">
+<h3>Ram<a class="headerlink" href="#ram" title="Link to this heading">#</a></h3>
+<p>The avoidance function is the only measure to reduce the number of predicted ship object collision due to ram events:</p>
+<ol class="arabic simple">
+<li><p>Avoidance function (default enabled)</p></li>
+<li><p>Pilot assistance (optionally)</p></li>
+</ol>
+<p>The ram measure probability (<span class="math notranslate nohighlight">\(P_{mr}\)</span>) can be computed by combining the probabilities of the above measures as follows:</p>
+<div class="math notranslate nohighlight">
+\[P_{mr} = P_{av}P_{pi}\]</div>
+<section id="avoidance-function">
+<h4>Avoidance function<a class="headerlink" href="#avoidance-function" title="Link to this heading">#</a></h4>
+<p>The ram model has the avoidance function measure to reduce the probability of a collision due to a ram event. The probability is calculated as
+follows:</p>
+<div class="math notranslate nohighlight">
+\[P_{av}=e^{-a\frac{x}{L}} \text{ , } a=0.1\]</div>
+<p>Variable <span class="math notranslate nohighlight">\(L\)</span> corresponds to the length of the ship. The value of <span class="math notranslate nohighlight">\(x\)</span> is the distance between the static object and the intersection
+of the course with the link from which the ram event started.</p>
+</section>
+<section id="id4">
+<h4>Pilot assistance<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<p>The pilot boards a ship and temporarily joins the crew to safely guide the passage of the ship. The pilot’s knowledge and expertise
+reduces the probability of an accident with a static object.</p>
+<div class="math notranslate nohighlight">
+\[
+P_{pi} = \begin{cases}
+           \begin{split}
+             1.0 &amp;\text{, disabled } \\
+             0.x &amp;\text{, enabled }
+           \end{split}
+         \end{cases}
+\]</div></section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomenclature">Nomenclature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ship-ship-measures">Ship-Ship Measures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pilot-assistance">Pilot assistance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ship-object-measures">Ship-Object Measures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drift">Drift</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#engine-repair-measure">Engine repair measure</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-and-wind">Wave and Wind</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#tide">Tide</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#anchor-deployment">Anchor deployment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#emergency-rescue-towing-vessel">Emergency Rescue Towing Vessel</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ram">Ram</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#avoidance-function">Avoidance function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Pilot assistance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
